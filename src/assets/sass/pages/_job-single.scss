@@ -1,0 +1,348 @@
+.bg-white {
+    background: $background-white;
+}
+.box-head-single {
+    background-color: $background-head-single;
+    display: inline-block;
+    width: 100%;
+    padding: 55px 0px;
+    position: relative;
+    &.bg-2 {
+        background-color: $background-blue-light-2;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        z-index: 1;
+        width: 100px;
+        background: url(../imgs/page/job-single/bg-header-left.svg) no-repeat right bottom;
+    }
+    &::after {
+        z-index: 1;
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        height: 100%;
+        width: 543px;
+        background: url(../imgs/page/job-single/bg-header-right.svg) no-repeat right bottom;
+    }
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+    
+    h3 {
+        margin-bottom: 15px;
+    }
+    .avatar-sidebar {
+        position: relative;
+        text-align: center;
+        display: flex;
+        margin-bottom: 15px;
+        justify-content: center;
+        img {
+            max-width: 60px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .sidebar-company {
+            font-weight: 600;
+        }
+        .sidebar-website-text {
+            color: $color-brand;
+        }
+    }
+}
+.img-rd-15 {
+    border-radius: 15px;
+    width: 100%;
+}
+.single-image-feature {
+    margin-bottom: 15px;
+    display: inline-block;
+    width: 100%;
+}
+.content-single {
+    p {
+        font-size: $font-md;
+        line-height: 200%;
+        color: $color-text;
+        margin-bottom: 20px;
+    }
+    h5 {
+        margin-top: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    ul {
+        padding-left: 30px;
+        line-height: 200%;
+        font-size: $font-md;
+        color: $color-text;
+        list-style: disc;
+    }
+}
+.author-single {
+    display: inline-block;
+    padding-left: 26px;
+    padding-top: 10px;
+    span {
+        position: relative;
+        background-color: $background-white;
+        font-size: $font-lg;
+        line-height: 28px;
+        font-weight: bold;
+        &::before {
+            content: "";
+            height: 1px;
+            border-top: 1px solid $border-color-5;
+            width: 21px;
+            position: absolute;
+            top: 13px;
+            left: -26px;
+        }
+        &::after {
+            content: "";
+            height: 1px;
+            border-top: 1px solid $border-color-5;
+            width: 21px;
+            position: absolute;
+            top: 13px;
+            right: -27px;
+        }
+    }
+}
+.single-apply-jobs {
+    display: inline-block;
+    width: 100%;
+    padding: 47px 0px;
+    border-top: 1px solid $border-color-1;
+    margin-top: 50px;
+}
+.heading-border {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 0px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 25px;
+        left: 0px;
+        width: 100%;
+        height: 1px;
+        z-index: 1;
+        border-top: 1px solid $border-color-1;
+    }
+    span {
+        background-color: $background-white;
+        display: inline-block;
+        padding: 5px 10px 5px 0px;
+        position: relative;
+        z-index: 2;
+    }
+}
+.sidebar-shadow {
+    border: 1px solid $border-color-1;
+    padding: 29px 33px;
+    border-radius: 10px;
+    background-color: $background-white;
+    box-shadow: $box-shadow-5;
+    margin-bottom: 40px;
+    .sidebar-heading {
+        display: inline-block;
+        width: 100%;
+        .avatar-sidebar {
+            figure {
+                float: left;
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                }
+            }
+            .sidebar-info {
+                display: block;
+                padding-left: 60px;
+                position: relative;
+                .sidebar-company {
+                    font-size: $font-lg;
+                    font-family: $font-heading;
+                    line-height: 18px;
+                    font-weight: bold;
+                    display: block;
+                    padding-top: 5px;
+                }
+                .sidebar-website-text {
+                    font-size: $font-xxs;
+                    line-height: 18px;
+                    color: $color-brand;
+                }
+                .dropdown-toggle::after {
+                    display: none;
+                }
+                .dropdown-menu {
+                    min-width: unset;
+                    box-shadow: $box-shadow-5;
+                    border: thin solid $border-color;
+                    a {
+                        font-size: 14px;
+                        color: $color-submenu;
+                    }
+                }
+            }
+        }
+    }
+}
+.text-description {
+    font-size: $font-md;
+    color: $color-text;
+    line-height: 24px;
+    display: inline-block;
+    width: 100%;
+}
+.sidebar-team-member {
+    border-top: 1px solid $border-color-1;
+    display: inline-block;
+    width: 100%;
+    padding: 30px 0px 0px 0px;
+    margin: 30px 0px 0px 0px;
+    .sidebar-list-member {
+        display: inline-block;
+        width: 100%;
+        padding: 30px 0px;
+        ul {
+            li {
+                display: inline-block;
+                margin-right: 18px;
+                margin-bottom: 18px;
+                transition-duration: 0.2s;
+                &:hover {
+                    transform: translateY(-3px);
+                    transition-duration: 0.2s;
+                    img {
+                        opacity: 0.85;
+                        transition-duration: 0.2s;
+                    }
+                }
+                a {
+                    img {
+                        width: 49px;
+                        height: 49px;
+                        border-radius: 50%;
+                        transition-duration: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+    .info-address {
+        padding-top: 20px;
+        span {
+            display: block;
+            font-size: $font-md;
+            padding-bottom: 10px;
+            i {
+                float: left;
+                margin: 4px 8px 0px 0px;
+                color: $color-muted;
+            }
+            span {
+                display: block;
+                padding-left: 28px;
+            }
+        }
+    }
+}
+.sidebar-list-job {
+    border-top: 1px solid $border-color-1;
+    display: inline-block;
+    width: 100%;
+    padding: 30px 0px 0px 0px;
+    margin: 30px 0px 0px 0px;
+    ul {
+        padding: 0px;
+        li {
+            display: inline-block;
+            width: 100%;
+            padding-bottom: 20px;
+            .sidebar-icon-item {
+                float: left;
+                width: 32px;
+                i {
+                    font-size: 23px;
+                    color: $color-muted;
+                }
+            }
+            .sidebar-text-info {
+                display: block;
+                padding-left: 35px;
+                span {
+                    color: $color-gray-200;
+                }
+                strong {
+                    display: block;
+                    padding-top: 10px;
+                    color: $color-heading;
+                }
+            }
+        }
+    }
+}
+.sidebar-normal {
+    padding: 29px 33px;
+}
+.ul-lists {
+    padding: 15px 0px 15px 15px;
+    li {
+        list-style-type: disc;
+        color: $color-muted;
+        padding-bottom: 5px;
+        a {
+            color: $color-muted;
+            text-decoration: none;
+            &:hover {
+                color: $color-brand;
+            }
+        }
+    }
+}
+.btn-dots-abs-right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.job-overview {
+    border: thin solid $border-color;
+    box-shadow: $box-shadow-2;
+    border-radius: 15px;
+    padding: 50px;
+    margin-bottom: 50px;
+    .sidebar-icon-item {
+        font-size: 18px;
+        color: #a0abb8;
+    }
+    .text-description {
+        font-size: 16px;
+        color: #727272;
+        line-height: 24px;
+    }
+}
+
+.job-meta {
+    font-size: $font-xxs;
+    color: $color-muted;
+    .company {
+        font-weight: bold;
+        color: $color-brand;
+    }
+    span {
+        margin-right: 15px;
+        display: inline-block;
+    }
+}

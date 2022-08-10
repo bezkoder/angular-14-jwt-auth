@@ -9,35 +9,24 @@ const httpOptions = {
 };
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class AuthService {
-  constructor(private http: HttpClient) {}
 
-  login(username: string, password: string): Observable<any> {
-    return this.http.post(
-      AUTH_API + 'signin',
-      {
-        username,
-        password,
-      },
-      httpOptions
-    );
+  constructor(private http: HttpClient) { }
+
+  login(credentials: { username: any; password: any; }): Observable<any> {
+    return this.http.post(AUTH_API + 'signin', {
+      username: credentials.username,
+      password: credentials.password
+    }, httpOptions);
   }
 
-  register(username: string, email: string, password: string): Observable<any> {
-    return this.http.post(
-      AUTH_API + 'signup',
-      {
-        username,
-        email,
-        password,
-      },
-      httpOptions
-    );
-  }
-
-  logout(): Observable<any> {
-    return this.http.post(AUTH_API + 'signout', { }, httpOptions);
+  register(user: { username: any; email: any; password: any; }): Observable<any> {
+    return this.http.post(AUTH_API + 'signup', {
+      username: user.username,
+      email: user.email,
+      password: user.password
+    }, httpOptions);
   }
 }

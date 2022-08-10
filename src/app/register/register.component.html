@@ -1,89 +1,68 @@
-<div class="col-md-12">
-  <div class="card card-container">
-    <img
-      id="profile-img"
-      src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-      class="profile-img-card"
-    />
-    <form
-      *ngIf="!isSuccessful"
-      name="form"
-      (ngSubmit)="f.form.valid && onSubmit()"
-      #f="ngForm"
-      novalidate
-    >
-      <div class="form-group">
-        <label for="username">Username</label>
-        <input
-          type="text"
-          class="form-control"
-          name="username"
-          [(ngModel)]="form.username"
-          required
-          minlength="3"
-          maxlength="20"
-          #username="ngModel"
-          [ngClass]="{ 'is-invalid': f.submitted && username.errors }"
-        />
-        <div class="invalid-feedback" *ngIf="username.errors && f.submitted">
-          <div *ngIf="username.errors['required']">Username is required</div>
-          <div *ngIf="username.errors['minlength']">
-            Username must be at least 3 characters
-          </div>
-          <div *ngIf="username.errors['maxlength']">
-            Username must be at most 20 characters
-          </div>
+<div class="d-flex flex-column flex-root">
+  <div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login">
+    <div class="col-md-6 d-none d-md-flex bg-image">
+    </div>
+    <div class="login-content flex-row-fluid d-flex flex-column justify-content-center position-relative overflow-hidden p-7 mx-auto">
+      <div class="d-flex flex-column-fluid flex-center">
+        <div class="login-form login-signin">
+          <br>
+          <form class="form fv-plugins-bootstrap fv-plugins-framework" novalidate="novalidate" id="kt_login_signin_form">
+            <div class="pb-13 pt-lg-0 pt-5">
+              <div class="pb-13 pt-lg-0 pt-5">
+                <h3 class="font-weight-bolder text-dark font-size-h4 font-size-h1-lg">Register new user</h3>
+                <p class="text-muted font-weight-bold font-size-h4">Become part of exposing new talents</p>
+              </div>
+            </div>
+            <form
+              *ngIf="!isSuccessful"
+              name="form"
+              (ngSubmit)="f.form.valid && onSubmit()"
+              #f="ngForm"
+              novalidate
+            >
+              <div class="form-group fv-plugins-icon-container">
+                <label for="username" class="font-size-h6 font-weight-bolder text-dark">Username</label>
+                <input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg"
+                       type="text"
+                       name="username"
+                       [(ngModel)]="form.username"
+                       maxlength="20"
+                       #username="ngModel"
+                       id="username"
+                       autocomplete="off">
+              </div>
+              <div class="form-group fv-plugins-icon-container">
+                <label for="email" class="font-size-h6 font-weight-bolder text-dark">Email</label>
+                <input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg"
+                       type="email"
+                       name="email"
+                       [(ngModel)]="form.email"
+                       maxlength="100"
+                       #email="ngModel"
+                       id="email"
+                       autocomplete="off">
+              </div>
+              <div class="form-group fv-plugins-icon-container">
+                <div class="d-flex justify-content-between mt-n5">
+                  <label for="password" class="font-size-h6 font-weight-bolder text-dark pt-5">Password</label>
+                </div>
+                <input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg"
+                       type="password"
+                       [(ngModel)]="form.password"
+                       #password="ngModel"
+                       name="password"
+                       id="password"
+                       autocomplete="off">
+                <div class="fv-plugins-message-container"></div>
+              </div>
+              <div class="form-group pb-lg-0 pb-5">
+                <button type="submit"  class="btn btn-primary
+              font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3" style="background-color: #9777fa; border-color:#9777fa">Sign Up</button>
+              </div>
+            </form>
+            <input type="hidden"><div></div></form>
         </div>
       </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input
-          type="email"
-          class="form-control"
-          name="email"
-          [(ngModel)]="form.email"
-          required
-          email
-          #email="ngModel"
-          [ngClass]="{ 'is-invalid': f.submitted && email.errors }"
-        />
-        <div class="invalid-feedback" *ngIf="email.errors && f.submitted">
-          <div *ngIf="email.errors['required']">Email is required</div>
-          <div *ngIf="email.errors['email']">
-            Email must be a valid email address
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          name="password"
-          [(ngModel)]="form.password"
-          required
-          minlength="6"
-          #password="ngModel"
-          [ngClass]="{ 'is-invalid': f.submitted && password.errors }"
-        />
-        <div class="invalid-feedback" *ngIf="password.errors && f.submitted">
-          <div *ngIf="password.errors['required']">Password is required</div>
-          <div *ngIf="password.errors['minlength']">
-            Password must be at least 6 characters
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary btn-block">Sign Up</button>
-      </div>
-
-      <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
-        Signup failed!<br />{{ errorMessage }}
-      </div>
-    </form>
-
-    <div class="alert alert-success" *ngIf="isSuccessful">
-      Your registration is successful!
     </div>
   </div>
 </div>

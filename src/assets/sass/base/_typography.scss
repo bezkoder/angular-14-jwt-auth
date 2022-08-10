@@ -1,0 +1,146 @@
+/*TYPOGRAPHY*/
+body {
+    color: $color-text;
+    font-family: $font-text;
+    font-size: 14px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-heading,
+.display-1,
+.display-2,
+.heading-lg,
+.heading-sm-1 {
+    font-family: $font-heading;
+    color: $color-heading;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 69px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 55px;
+    line-height: 67px;
+}
+
+h3 {
+    font-size: 44px;
+    line-height: 54px;
+}
+
+h4 {
+    font-size: 28px;
+    line-height: 34px;
+}
+
+h5 {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+}
+.heading-lg {
+    font-size: 52px;
+    line-height: 63px;
+    font-weight: bold;
+}
+.heading-md {
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-black-1;
+    font-weight: 500;
+    font-family: $font-heading;
+}
+.heading-sm {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+.text-sm {
+    font-size: 12px;
+    line-height: 16px;
+    font-family: $font-text;
+}
+.text-md {
+    font-size: 16px;
+    line-height: 20px;
+    font-family: $font-text;
+}
+.small-heading {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    font-family: $font-heading;
+}
+.medium-heading {
+    font-size: 18px;
+    color: $color-heading;
+    line-height: 22px;
+    font-weight: 600;
+    font-family: $font-heading;
+}
+.display-block {
+    display: block;
+}
+.font-bold {
+    font-weight: bold;
+}
+.font-semibold {
+    font-weight: 600;
+}
+.text-brand {
+    color: $color-brand;
+}
+.font-3xs {
+    font-size: $font-3xs;
+}
+.font-xxs {
+    font-size: $font-xxs;
+}
+.font-xs {
+    font-size: $font-xs;
+}
+.font-sm {
+    font-size: $font-sm;
+}
+.font-md {
+    font-size: $font-md;
+}
+.font-md-2 {
+    font-size: $font-md-2;
+}
+.font-lg {
+    font-size: $font-lg;
+}
+.font-xl {
+    font-size: $font-xl;
+}
+.font-2xl {
+    font-size: $font-2xl;
+}
+.font-3xl {
+    font-size: $font-3xl;
+}
+.text-grey-6 {
+    color: $color-grey-6 !important;
+}
+.text-muted{
+    color: $color-muted !important;
+}

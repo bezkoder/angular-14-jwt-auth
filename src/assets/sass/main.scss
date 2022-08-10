@@ -1,0 +1,84 @@
+/***
+ Theme Name: Jobhub
+ Description: Job Board Finder HTML template
+ Version: 1.1
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
+
+// Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// Vendors
+@import
+  'vendors/vendors-import';
+
+// Base stuff
+@import
+  'base/common',
+  'base/animation',
+  'base/typography';
+
+// Components
+@import
+  'components/buttons',
+  'components/form',
+  'components/slider',
+  'components/noUISlider',
+  'components/card',
+  'components/tabs',
+  'components/misc',
+  'components/banners';
+
+  // Themes
+@import
+  'themes/default';
+
+// Layout-related sections
+@import
+  'layout/header',
+  'layout/navigation',
+  'layout/sidebar',
+  'layout/footer',
+  'layout/spacing';
+
+// Page-specific styles
+@import
+  'pages/pages',
+  'pages/blog',
+  'pages/job-single',
+  'pages/candidate-single-1',
+  'pages/job-listing-grid',
+  'pages/job-listing-grid-2',
+  'pages/job-listing-list',
+  'pages/employers',
+  'pages/homepage2',
+  'pages/homepage3';
+
+  // Responsive
+@import
+  'layout/responsive';

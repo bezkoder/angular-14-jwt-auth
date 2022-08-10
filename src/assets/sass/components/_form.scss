@@ -1,0 +1,150 @@
+.cb-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  line-height: 21px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.cb-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 23px;
+    width: 23px;
+    background-color: $background-white;
+    border: 2px solid $border-color-6;
+    border-radius: 4px;
+}
+.cb-container input:checked ~ .checkmark {
+  border: 2px solid $color-brand;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.cb-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.cb-container .checkmark:after {
+  left: -1px;
+  top: -1px;
+  width: 21px;
+  height: 21px;
+  background: $background-brand url(../imgs/theme/icons/tick.svg) no-repeat center;
+}
+
+/*COMPONENTS -> FORM*/
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+	opacity: 1;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	opacity: 1;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+	opacity: 1;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+	opacity: 1;
+}
+input {
+	border: 1px solid $border-color;
+	border-radius: 10px;
+	height: 50px;
+	box-shadow: none;
+	padding-left: 20px;
+	font-size: $font-md;
+	width: 100%;
+	&:focus {
+		background: transparent;
+		border: 1px solid $border-color-1-hover;
+	}
+}
+select {
+	width: 100%;
+	background: transparent;
+	border: 0px solid $border-color;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	font-size: $font-md;
+	color: $color-text;
+}
+option {
+	background: #fff;
+	border: 0px solid #626262;
+	padding-left: 10px;
+	font-size: $font-md;
+}
+textarea {
+	border: 1px solid $border-color;
+	border-radius: 10px;
+	height: 50px;
+	box-shadow: none;
+	padding: 10px 10px 10px 20px;
+	font-size: $font-md;
+	width: 100%;
+	min-height: 250px;
+	&:focus {
+		background: transparent;
+		border: 1px solid $border-color-1-hover;
+	}
+}
+
+/*contact form*/
+.contact-from-area {
+	.contact-form-style {
+		button {
+			font-size: $font-lg;
+			font-weight: 500;
+			padding: 20px 40px;
+			color: #ffffff;
+			border: none;
+			background-color: $color-brand;
+			border-radius: 10px;
+			font-family: $font-heading;
+			&:hover {
+				background-color: $color-brand-2 !important;
+			}
+		}
+	}
+}
+.form-group {
+	margin-bottom: 1rem;
+	input {
+		background: #fff;
+		border: 1px solid $border-color;
+		height: 64px;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		padding-left: 20px;
+		font-size: $font-md;
+		width: 100%;
+		&:focus {
+			background: transparent;
+			border-color: $border-color-1-hover;
+		}
+		&.form-icons {
+			padding-left: 42px;
+		}
+	}
+}
+label {
+	margin-bottom: 5px;
+}

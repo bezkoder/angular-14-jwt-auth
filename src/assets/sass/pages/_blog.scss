@@ -1,0 +1,132 @@
+.archive-header {
+    h3 {
+        font-size: 46px;
+    }
+    .post-meta {
+        .author {
+            img {
+                max-width: 30px;
+                border-radius: 50%;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+.card-blog-1 {
+    border-radius: 15px;
+    border: thin solid $border-color;
+    padding: 30px;
+    &:hover {
+        box-shadow: $box-shadow-5;
+    }
+    .post-thumb {
+        border-radius: 15px;
+        overflow: hidden;
+        img {
+            border-radius: 15px;
+        }
+    }
+    .post-meta {
+        .author {
+            img {
+                max-width: 30px;
+                border-radius: 50%;
+                margin-right: 5px;
+            }
+        }
+    }
+    h3.post-title {
+        font-size: 24px;
+        line-height: 1.33;
+        a {
+            color: $color-heading;
+            &:hover {
+                color: $color-brand;
+            }
+        }
+        &.small {
+            font-size: 18px;
+        }
+    }
+    .btn-brand-hover {
+        border-color: $border-color-1-hover;
+    }
+    &.post-list {
+        display: flex;
+        .post-thumb {
+            max-width: 275px;
+            margin-right: 25px;
+        }
+    }
+}
+
+.single-body {
+    figure img {
+        border-radius: 15px;
+    }
+    p {
+        font-size: $font-lg;
+        margin-bottom: 15px;
+        color: $color-single;
+        line-height: 1.5;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 30px 0 25px 0;
+    }
+    .excerpt {
+        p {
+            font-size: $font-2xl;
+            line-height: 1.5;
+            color: $color-heading;
+        }
+    }
+    blockquote {
+        background-color: $background-16;
+        padding: 40px 60px;
+        border-radius: 15px;
+        margin: 30px auto;
+        font-size: 24px;
+        max-width: 80%;
+        p {
+            font-size: 24px;
+            line-height: 32px;
+            color: #7e7e7e;
+            margin-bottom: 0;
+        }
+    }
+}
+.author-bio {
+	border-radius: 15px;
+	border: 1px solid $border-color;
+    h5 {
+        margin: 0 !important;
+        font-weight: 600;
+    }
+	.author-image {
+		display: flex;
+		justify-content: start;
+		align-content: center;
+		align-items: center;
+		img {
+			margin-right: 10px;
+            max-width: 64px;
+		}
+		p {
+			font-size: 14px;
+		}
+	}
+}
+.related-posts {
+    h6 {
+        font-size: 16px;
+        font-weight: 600;
+        a {
+            color: $color-heading;
+        }
+    }
+}

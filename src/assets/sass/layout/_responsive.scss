@@ -1,0 +1,469 @@
+@include media-breakpoint-down(xxl) {
+    //max-width: 1399.98px
+    .custom-class {
+        display: block;
+    }
+}
+@include media-breakpoint-down(xl) {
+    //max-width: 1199.98px
+    .custom-class {
+        display: block;
+    }
+}
+@include media-breakpoint-down(lg) {
+    //max-width: 991.98px
+    .mt-md-0 {
+        margin-top: 0 !important;
+    }
+    .pl-lg-15 {
+        padding-left: 15px !important;
+    }
+    .header-right {
+        padding-right: 50px;
+    }
+    h2.section-title {
+        font-size: 48px;
+    }
+    .banner-hero {
+        max-width: 100%;
+        padding: 0;
+        &.hero-1 {
+            .block-banner {
+                padding-top: 50px;
+                padding-bottom: 50px;
+                padding-right: var(--bs-gutter-x, 0.75rem);
+                padding-left: var(--bs-gutter-x, 0.75rem);
+                margin-right: auto;
+                margin-left: auto;
+                max-width: 720px;
+                overflow: hidden;
+            }
+            &::before {
+                width: 100%;
+                border-radius: 0;
+                left: 0;
+            }
+            .banner-imgs {
+                display: none;
+            }
+            .text-small-primary {
+                font-size: 14px;
+            }
+            h1 {
+                font-size: 52px;
+            }
+        }
+    }
+    .box-swiper {
+        .swiper-button-next {
+            right: -45px;
+        }
+        .swiper-button-prev {
+            left: -45px;
+        }
+    }
+    .card-grid-2 {
+        h5 {
+            font-size: 18px;
+        }
+    }
+    .box-image-job {
+        .job-top-creator {
+            left: 10px;
+        }
+    }
+    .list-partners li {
+        padding: 15px 18px;
+        figure {
+            img {
+                max-width: 80px;
+            }
+        }
+    }
+    .box-newsletter {
+        padding: 57px 50px 96px 50px;
+    }
+    .nav.nav-right {
+        margin-top: 30px;
+    }
+    .mt-lg-30 {
+        margin-top: 30px !important;
+    }
+    .bg-banner-about.banner-home-3 {
+        padding-top: 30px !important;
+        padding-bottom: 20px !important;
+        .banner-hero {
+            max-width: 720px;
+            .block-banner {
+                padding-top: 0;
+                h2.heading-banner {
+                    font-size: 36px;
+                    line-height: 1.2;
+                }
+            }
+        }
+        &::before,
+        &::after {
+            opacity: 0.1;
+        }
+    }
+    .banner-hero {
+        &.banner-homepage-3 {
+            padding-top: 0;
+            margin-bottom: 50px;
+            h1 {
+                font-size: 48px;
+            }
+            .block-banner {
+                padding-right: 80px;
+                background: $background-5;
+            }
+            .banner-imgs {
+                display: none;
+            }
+        }
+    }
+    .box-info-job {
+        padding-left: 30px !important;
+        .mt-50 {
+            margin-top: 0px !important;
+        }
+    }
+    .block-pricing {
+        .most-popular {
+            margin-top: 0 !important;
+        }
+    }
+    .job-fillter {
+        margin: 15px 0 0 0;
+        border-top: 1px solid #eee;
+        padding-top: 15px;
+
+        .btn {
+            padding-left: 10px !important;
+        }
+        .dropdown-menu {
+            margin-left: 10px !important;
+            margin-top: 0 !important;
+        }
+    }
+    .heading-main-info {
+        .btn-default {
+            margin: 15px 0;
+        }
+    }
+    .card-blog-1 {
+        &.post-list {
+            .post-thumb {
+                max-width: 175px;
+                margin-right: 15px;
+            }
+            .btn-brand-hover {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            .post-title {
+                font-size: 20px;
+            }
+        }
+    }
+    .archive-header h3 {
+        font-size: 36px;
+        width: 100% !important;
+    }
+    .mb-md-30 {
+        margin-bottom: 30px !important;
+    }
+    .mt-md-50 {
+        margin-top: 50px !important;
+    }
+    .mt-md-30 {
+        margin-top: 30px !important;
+    }
+    .mt-md-0 {
+        margin-top: 0px !important;
+    }
+    .mb-md-0 {
+        margin-bottom: 0px !important;
+    }
+    .pl-md-0 {
+        padding-left: 0 !important;
+    }
+    .pl-md-15 {
+        padding-left: 15px !important;
+    }
+    .w-md-100 {
+        width: 100% !important;
+    }
+    .section-title-large {
+        font-size: 48px;
+    }
+    .leaflet-map {
+        height: 328px;
+        width: 100%;
+    }
+}
+@include media-breakpoint-down(md) {
+    //max-width: 767.98px
+    .section-title-large {
+        font-size: 42px;
+    }
+    .banner-hero .block-banner {
+        padding: 0;
+    }
+    .header-right {
+        display: none;
+    }
+    .mobile-header-wrapper-style {
+        .mobile-header-wrapper-inner {
+            .mobile-header-top {
+                padding: 15px 30px 13px 30px;
+                border-bottom: 1px solid $border-color;
+                .mobile-header-logo a img {
+                    width: 140px;
+                }
+            }
+            .mobile-header-content-area {
+                padding: 30px;
+            }
+        }
+    }
+    .nav.nav-right {
+        margin-top: 30px;
+    }
+    .box-head-single h3 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+    .social-share {
+        margin-top: 25px;
+        .btn-sm {
+            padding: 10px 15px;
+            vertical-align: middle;
+        }
+    }
+    .job-overview {
+        padding: 25px !important;
+    }
+}
+@include media-breakpoint-down(sm) {
+    //max-width: 575.98px
+    .section-box.mt-70,
+    .section-box.mt-80,
+    .section-box.mt-100,
+    .section-box.mt-40 {
+        margin-top: 30px !important;
+    }
+    .header.sticky-bar .col-lg-7 .burger-icon {
+        right: 15px;
+    }
+    .banner-hero.hero-1 h1 {
+        font-size: 38px;
+    }
+    .banner-hero {
+        .block-banner {
+            .form-find {
+                padding: 15px;
+                margin-top: 40px !important;
+                form {
+                    display: block;
+                    input {
+                        margin-bottom: 15px;
+                    }
+                    button {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+    h2.section-title {
+        font-size: 32px;
+        line-height: 48px;
+    }
+    .mt-sm-15 {
+        margin-top: 15px !important;
+    }
+    .mt-sm-30 {
+        margin-top: 30px !important;
+    }
+    .pt-sm-15 {
+        padding-top: 15px;
+    }
+    .swiper-group-6 {
+        max-height: 140px;
+    }
+    .box-swiper .swiper-container .item-logo {
+        box-shadow: none;
+    }
+    .list-partners li {
+        padding: 15px 15px;
+    }
+    .box-newsletter {
+        padding: 50px 15px;
+        .text-md-newsletter {
+            font-size: 22px;
+            line-height: 28px;
+        }
+        .text-lg-newsletter {
+            font-size: 32px;
+        }
+        form {
+            display: block;
+        }
+    }
+    .footer {
+        .col-xs-6 {
+            width: 50%;
+        }
+        ul.mt-40 {
+            margin-top: 15px !important;
+            margin-bottom: 20px !important;
+        }
+        .footer-social {
+            margin-top: 15px;
+            margin-left: -10px;
+        }
+    }
+    .bg-banner-about.banner-home-3 {
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        .banner-hero .block-banner {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+    .card-job-top--info-heading {
+        margin-bottom: 10px;
+    }
+    .card-job-top--price {
+        margin-top: 15px;
+        display: block;
+    }
+    .box-info-job {
+        padding: 0 !important;
+    }
+    .block-job-bg::before {
+        display: none;
+    }
+    .box-mw-60 {
+        max-width: 100% !important;
+    }
+    .banner-hero.banner-homepage-3 .block-banner {
+        padding: 30px 15px;
+    }
+    .box-image-findjob img {
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+    .nav-right li {
+        margin-bottom: 15px;
+    }
+    .block-pricing.mt-125 {
+        margin-top: 50px !important;
+    }
+    .box-filters {
+        .list-tags-job {
+            display: none;
+        }
+    }
+    .job-fillter.d-flex {
+        display: block !important;
+        .box-button-find {
+            float: none;
+        }
+        .btn {
+            padding-left: 10px !important;
+        }
+        .dropdown {
+            margin: 0 0 10px 0;
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    .box-shadow-bdrd-15.box-filters {
+        padding-bottom: 30px;
+    }
+    .social-share {
+        .btn-sm {
+            padding: 10px 11px;
+        }
+    }
+    .card-employers {
+        .col-sm-6 {
+            width: 50%;
+        }
+    }
+    .archive-header {
+        h3 {
+            font-size: 32px;
+            line-height: 1.2;
+        }
+    }
+    .card-blog-1 {
+        .tags {
+            display: none;
+        }
+        .post-meta {
+            font-size: 12px;
+        }
+        &.post-list {
+            display: block;
+            .post-thumb {
+                max-width: 100%;
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            .post-title {
+                font-size: 18px;
+            }
+        }
+    }
+    .single-body {
+        blockquote {
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin: 15px auto;
+            font-size: 18px;
+            max-width: 100%;
+            p {
+                font-size: 18px;
+                line-height: 1.5;
+            }
+        }
+    }
+    .bg-banner-about {
+        border-bottom-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+        padding: 15px 15px 40px 15px;
+        .heading-lg {
+            font-size: 32px;
+            line-height: 1.2;
+        }
+    }
+    .banner-about {
+        &::before {
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+    }
+    .section-title-large {
+        font-size: 38px;
+    }
+}
+@include media-breakpoint-up(xxl) {
+    //min-width: 1400px
+    .container.wide {
+        max-width: 1544px;
+    }
+}
+/*OTHER SCREEN*/
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+    .header-right {
+        display: none;
+    }
+}

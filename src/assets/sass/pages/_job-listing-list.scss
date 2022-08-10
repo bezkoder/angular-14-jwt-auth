@@ -1,0 +1,29 @@
+.job-list-list {
+    .list-recent-jobs {
+        margin-top: 0px;
+    }
+}
+.background-12 {
+    background-color: $background-12;
+}
+.background-6 {
+    background-color: $background-6;
+}
+.background-blue-light {
+    background-color: $background-blue-light;
+}
+.background-urgent {
+    background-color: $background-urgent;
+}
+.job-tags {
+    a {
+        background-color: $background-7;
+        color: $color-gray-200;
+        border-radius: 15px;
+        padding: 8px 20px;
+        display: inline-block;
+        & + a {
+            margin-left: 5px;
+        }
+    }
+}

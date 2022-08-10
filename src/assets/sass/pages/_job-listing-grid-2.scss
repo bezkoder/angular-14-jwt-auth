@@ -1,0 +1,46 @@
+.text-brand-10 {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 14px;
+    color: $color-brand;
+    font-family: $font-text;
+}
+.text-icon-first {
+    position: relative;
+    display: inline-block;
+    padding-left: 10px;
+    &::before {
+        position: absolute;
+        top: 5px;
+        left: 0px;
+        content: "";
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        background-color: $background-14;
+    }
+}
+.job-listing-grid-2 {
+    .card-grid-2 {
+        .card-block-info {
+            .card-text-price {
+                font-size: $font-md;
+                line-height: 20px;
+                span {
+                    font-size: $font-xxs;
+                }
+            }
+            .dropdown-menu {
+                border: thin solid $border-color;
+                box-shadow: $box-shadow-5;
+                .dropdown-item {
+                    font-size: 14px;
+                    color: $color-submenu;
+                }
+            }
+        }
+    }
+}
+.text-gray-100 {
+    color: $color-gray-100;
+}

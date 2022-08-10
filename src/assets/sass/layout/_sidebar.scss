@@ -1,0 +1,94 @@
+.sidebar-title {
+    border-bottom: thin solid $border-color;
+    font-weight: 600;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+.search-form {
+    form {
+        position: relative;
+        input {
+            border: 1px solid #ececec;
+            border-radius: 10px;
+            height: 64px;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            padding-left: 20px;
+            font-size: 16px;
+            width: 100%;
+        }
+        button {
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            right: 0;
+            border: none;
+            font-size: 20px;
+            height: 100%;
+            padding: 0 24px;
+            background-color: transparent;
+            color: #242424;
+        }
+    }
+}
+
+.widget-categories {
+    background-color: $background-2 !important;
+    li {
+        padding: 8px 0;
+        & + li {
+            border-top: 1px solid $border-color;
+        }
+        a {
+            color: $color-heading;
+            font-size: $font-md;
+        }
+        span.count {
+            background-color: $background-16;
+            color: $color-heading;
+            border-radius: 3px;
+            display: block;
+            padding: 3px 5px;
+            min-width: 26px;
+            text-align: center;
+        }
+        &:hover {
+            span.count {
+                background-color: $color-brand;
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.post-list-small-item {
+    transition-duration: 0.2s;
+    &:hover {
+        transition-duration: 0.2s;
+        transform: translateY(-3px);
+    }
+    figure {
+        img {
+            max-width: 85px;
+            border-radius: 5px;
+        }
+    }
+    .post-meta {
+        font-size: 13px;
+        img {
+            max-width: 30px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+    }
+    h5 {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}

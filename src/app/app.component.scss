@@ -1,0 +1,17 @@
+.section-class{
+    width: 100%
+  }
+  
+  .background {
+    //padding: app.pxToRem(25px) app.pxToRem(30px) app.pxToRem(25px) app.pxToRem(45px);
+    box-sizing: border-box;
+    min-height: 100vh;
+    //height: 100%;
+    overflow: auto;
+    padding-bottom: 60px;
+    background: #EEF0F8;
+  }
+  .main-class{
+    min-height: 100vh;
+  }
+  
