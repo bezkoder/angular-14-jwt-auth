@@ -8,27 +8,17 @@
 /*  padding: 40px 40px;*/
 /*}*/
 
-.login,
-.image {
-  min-height: 100vh;
-}
-.bg-image {
-  background-image: url('https://source.unsplash.com/random/?jobs');
-  background-size: cover;
-  background-position: center center;
-}
-
 /*.card {*/
-/*  background-color: #FFFFE0;*/
+/*  background-color: #f7f7f7;*/
 /*  padding: 20px 25px 30px;*/
 /*  margin: 0 auto 25px;*/
 /*  margin-top: 50px;*/
 /*  -moz-border-radius: 2px;*/
 /*  -webkit-border-radius: 2px;*/
+/*  border-radius: 2px;*/
 /*  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);*/
 /*  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);*/
 /*  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);*/
-/*  border-radius:7%;*/
 /*}*/
 
 /*.profile-img-card {*/
@@ -39,76 +29,6 @@
 /*  -moz-border-radius: 50%;*/
 /*  -webkit-border-radius: 50%;*/
 /*  border-radius: 50%;*/
-/*}*/
-/* Split the screen in half */
-/*.split {*/
-/*  height: 100%;*/
-/*  width: 50%;*/
-/*  position: fixed;*/
-/*  z-index: 1;*/
-/*  top: 0;*/
-/*  overflow-x: hidden;*/
-/*}*/
-
-/*!* Control the left side *!*/
-/*.left {*/
-/*  left: 0;*/
-/*  background-color: white;*/
-/*}*/
-
-/*!* Control the right side *!*/
-/*.right {*/
-/*  right: 0;*/
-/*  background-color: white;*/
-/*}*/
-
-/*!* If you want the content centered horizontally and vertically *!*/
-/*.centered {*/
-/*  position: absolute;*/
-/*  top: 50%;*/
-/*  left: 50%;*/
-/*  transform: translate(-50%, -50%);*/
-/*  text-align: center;*/
-/*}*/
-
-/*!* Style the image inside the centered container, if needed *!*/
-/*.centered img {*/
-/*  width: 150px;*/
-/*  border-radius: 50%;*/
-/*}*/
-
-/*.example-container{*/
-/*  text-align: left;*/
-/*  margin-bottom: 35px;*/
-/*  z-index: 58;*/
-/*}*/
-
-/*.form-container{*/
-/*  width: 400px;*/
-/*  margin: 0px auto;*/
-/*  margin-top: 200px*/
-/*}*/
-
-/*.form-field{*/
-/*  display: block*/
-/*}*/
-
-/*.filled{*/
-/*  background-color: #5544b7;*/
-/*  !*background-color: var(--accent-color);*!*/
-/*  !*color: #ffffff;*!*/
-/*  color: var(--light-color);*/
-/*  position: absolute;*/
-/*  z-index: 5;*/
-/*}*/
-
-/*.error-message{*/
-/*  color: red;*/
-/*  padding: 0 1em;*/
-/*  width: 100%;*/
-/*  font-size: 75%;*/
-/*  position: absolute;*/
-/*  top: calc(100% - 1.8541666667em);*/
 /*}*/
 body {
   background: #EEF0F8;
@@ -172,10 +92,7 @@ user agent stylesheet
 div {
   display: block;
 }
-.page-loading * {
-  -webkit-transition: none !important;
-  transition: none !important;
-}
+
 .flex-column-fluid {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
@@ -213,15 +130,18 @@ svg {
   overflow: hidden;
   vertical-align: middle;
 }
-*, *::before, *::after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+
+.login,
+.image {
+  min-height: 100vh;
+}
+.bg-image {
+  background-image: url('https://source.unsplash.com/random/?happy,jobs');
+  background-size: cover;
+  background-position: center center;
 }
 
-.page-loading * {
-  -webkit-transition: none !important;
-  transition: none !important;
-}
+
 a, button {
   outline: 0 !important;
 }
@@ -230,21 +150,11 @@ a {
   transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 }
 a {
-  color: #3699FF;
+  color: #9777fa;
   text-decoration: none;
   background-color: transparent;
 }
 
-.iframe {
-  border-width: 2px;
-  border-style: inset;
-  border-color: initial;
-  border-image: initial;
-}
-
-element.style {
-  background-color: #F2C98A;
-}
 @media (min-width: 992px) {
   .login.login-1 .login-content .login-form {
     width: 100%;
@@ -489,7 +399,7 @@ input, button, select, optgroup, textarea {
 }
 .flex-column-fluid {
   -webkit-box-flex: 1;
-//-ms-flex: 1 0 auto;
+  //-ms-flex: 1 0 auto;
   flex: 1 0 auto;
 }
 
@@ -691,16 +601,16 @@ label {
   flex: 1 0 auto;
 }
 .d-flex {
-//display: -webkit-box !important;
-//display: -ms-flexbox !important;
+  //display: -webkit-box !important;
+  //display: -ms-flexbox !important;
   display: flex !important;
 }
 .flex-center {
   -webkit-box-pack: center;
-//-ms-flex-pack: center;
+  //-ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
-//-ms-flex-align: center;
+  //-ms-flex-align: center;
   align-items: center;
 }
 @media (min-width: 992px) {
@@ -737,4 +647,5 @@ label {
     max-width: 450px;
   }
 }
+
 

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../_services/auth.service';
+import {AuthService} from "../_services/auth.service";
+import {Router} from "@angular/router";
+import { ToastrService } from 'ngx-toastr';
+import { TokenStorageService } from 'src/app/_services/token-storage.service';
 
 @Component({
   selector: 'app-register',
@@ -7,33 +10,37 @@ import { AuthService } from '../_services/auth.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  form: any = {
-    username: null,
-    email: null,
-    password: null
-  };
+
+  form: any = {};
   isSuccessful = false;
   isSignUpFailed = false;
   errorMessage = '';
+  model: any;
 
-  constructor(private authService: AuthService) { }
+
+  constructor(private authService: AuthService,  private toastr: ToastrService, private tokenStorageService: TokenStorageService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(): void {
-    const { username, email, password } = this.form;
 
-    this.authService.register(username, email, password).subscribe({
-      next: data => {
+  onSubmit(): void {
+    this.authService.register(this.form).subscribe(
+        (data: any) => {
         console.log(data);
         this.isSuccessful = true;
-        this.isSignUpFailed = false;
+          this.router.navigateByUrl('employee');
+          this.toastr.success('New user added successfully', 'Success')
       },
-      error: err => {
+        (err: { error: { message: string; }; }) => {
+        this.toastr.error(err.error.message, 'ERROR')
         this.errorMessage = err.error.message;
-        this.isSignUpFailed = true;
       }
-    });
+    );
+  }
+
+  goToSignUp() {
+    this.router.navigateByUrl("/login");
+
   }
 }

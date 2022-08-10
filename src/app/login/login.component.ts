@@ -1,48 +1,55 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../_services/auth.service';
-import { StorageService } from '../_services/storage.service';
+import {AuthService} from "../_services/auth.service";
+import {TokenStorageService} from "../_services/token-storage.service";
+import {Router} from "@angular/router";
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  form: any = {
-    username: null,
-    password: null
-  };
+
+  form: any = {};
   isLoggedIn = false;
   isLoginFailed = false;
   errorMessage = '';
   roles: string[] = [];
 
-  constructor(private authService: AuthService, private storageService: StorageService) { }
-
+  constructor(private authService: AuthService,   private toastr: ToastrService,private tokenStorage: TokenStorageService, private router: Router) { }
   ngOnInit(): void {
-    if (this.storageService.isLoggedIn()) {
+    if (this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
-      this.roles = this.storageService.getUser().roles;
+      this.roles = this.tokenStorage.getUser().roles;
+      // this.gotoDashboard()
     }
   }
 
   onSubmit(): void {
-    const { username, password } = this.form;
-
-    this.authService.login(username, password).subscribe({
-      next: data => {
-        this.storageService.saveUser(data);
-
+    this.authService.login(this.form).subscribe(
+      data => {
+        
+        this.router.navigateByUrl('/user');
+        this.tokenStorage.saveToken(data.accessToken);
+        this.tokenStorage.saveUser(data);
+        this.toastr.success(
+          `You have successfully login!`,
+          'Success'
+        );
         this.isLoginFailed = false;
         this.isLoggedIn = true;
-        this.roles = this.storageService.getUser().roles;
-        this.reloadPage();
+        this.roles = this.tokenStorage?.getUser().roles;
+        // this.reloadPage();
+
       },
-      error: err => {
+      err => {
+        console.error(err)
         this.errorMessage = err.error.message;
+        this.toastr.error(`${err.error.message}`, 'Error');
         this.isLoginFailed = true;
       }
-    });
+    );
   }
 
   reloadPage(): void {

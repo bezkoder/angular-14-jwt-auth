@@ -12,8 +12,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardUserComponent } from './board-user/board-user.component';
-
-import { httpInterceptorProviders } from './_helpers/http.interceptor';
+import {authInterceptorProviders} from "./_helpers/auth.interceptor";
+import { ToastrModule } from 'ngx-toastr'; 
+import {DatePipe} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -30,9 +31,10 @@ import { httpInterceptorProviders } from './_helpers/http.interceptor';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot()
   ],
-  providers: [httpInterceptorProviders],
+  providers: [authInterceptorProviders,[DatePipe]],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
