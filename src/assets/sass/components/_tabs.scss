@@ -1,0 +1,36 @@
+.nav-right
+{
+  float: right;
+  margin-top: -10px;
+  li
+  {
+    float: left;
+    padding: 0px 0px 0px 5px;
+    button
+    {
+      display: block;
+      color: $color-stroke-3;
+      font-size: $font-md;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background: transparent;
+      border: 0px;
+      font-family: $font-heading;
+      font-weight: 500;
+      transition-duration: 0.2s;
+      &:hover
+      {
+        background-color: $background-brand;
+        color: $color-white;
+        transition-duration: 0.2s;
+        transform: translateY(-3px);
+      }
+      &.active
+      {
+        color: $color-white;
+        background-color: $background-brand;
+      }
+    }
+  }
+}

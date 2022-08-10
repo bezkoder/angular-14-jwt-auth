@@ -1,0 +1,213 @@
+.btn {
+    font-family: $font-text;
+    border-radius: 10px;
+    padding: 14px 25px;
+    font-size: $font-lg;
+    line-height: 1;
+    transition: 0.2s;
+    &.btn-default {
+        color: $color-white;
+        background-color: $color-brand;
+        &:hover {
+            background-color: $background-brand-hover;
+            transform: translateY(-2px);
+            transition: 0.2s;
+        }
+    }
+}
+.btn-grey-small {
+    background-color: $background-6;
+    font-size: $font-sm;
+    padding: 7px 10px;
+    border-radius: 6px;
+    color: $color-text;
+}
+.disc-btn:before {
+    content: "";
+    height: 5px;
+    width: 5px;
+    background-color: $background-brand;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0px 5px 2px 0px;
+}
+.btn-light-blue {
+    background-color: $background-blue-light;
+    border-radius: 6px;
+    padding: 7px 12px;
+    color: $color-text;
+    font-size: $font-sm;
+}
+.btn-pink {
+    background-color: $background-urgent;
+    border-radius: 6px;
+    padding: 7px 15px;
+    color: $color-text;
+    font-size: $font-sm;
+}
+.btn-border {
+    border: 1px solid $border-color-1;
+    padding: 15px 23px 15px 23px;
+    border-radius: 10px;
+    background: $background-white;
+    color: $color-black-1;
+    font-size: $font-md;
+    transition-duration: 0.2s;
+    &:hover {
+        color: $color-white;
+        background-color: $color-brand;
+        transition-duration: 0.2s;
+        transform: translateY(-3px);
+    }
+}
+.btn-dots {
+    border: 0px;
+    background-image: url(../imgs/theme/icons/dots.svg);
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+.btn-sm {
+    padding: 12px 20px;
+    vertical-align: middle;
+    img {
+        float: left;
+        margin: 0px 10px 0px 0px;
+    }
+}
+.btn-brand-hover {
+    padding: 14px 25px 14px 25px;
+}
+.btn-brand-hover:hover {
+    background-color: $background-brand;
+    color: $color-white;
+}
+.box-button-shadow {
+    position: relative;
+    display: inline-block;
+    &::before {
+        background: #9777fa;
+        filter: blur(20px);
+        border-radius: 10px;
+        content: "";
+        position: absolute;
+        width: 144px;
+        height: 39px;
+        z-index: 1;
+        left: 0px;
+        right: 0px;
+        top: 10px;
+        margin: auto;
+    }
+    a {
+        position: relative;
+        z-index: 12;
+    }
+}
+.btn-link {
+    font-family: $font-text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font-lg;
+    line-height: 18px;
+    color: $color-heading;
+    text-decoration: none;
+    &:hover {
+        color: $color-brand;
+    }
+}
+.icon-chevron-right {
+    background-image: url(../imgs/theme/icons/chevron-right.svg);
+    background-repeat: no-repeat;
+    background-position: right 19px center;
+    padding-right: 42px;
+    &:hover {
+        background-image: url(../imgs/theme/icons/chevron-right-light.svg);
+        color: #fff !important;
+    }
+}
+.btn-md {
+    padding: 11px 25px;
+}
+.btn-white-sm {
+    background-color: $background-white;
+    padding: 8px 37px 9px 17px;
+    border-color: $color-white;
+    font-size: $font-xxs;
+    background-position: right 13px center;
+}
+.btn-small {
+    border-radius: 6px;
+    padding: 7px 15px;
+    color: $color-text;
+    font-size: $font-sm;
+}
+.btn-tags-sm {
+    padding: 10px 18px;
+    background: $background-16;
+    border-radius: 50px;
+    font-size: $font-sm;
+    line-height: 12px;
+    transition-duration: 0.2s;
+    color: $color-gray-200;
+    &:hover {
+        transform: translateY(-2px);
+        transition-duration: 0.2s;
+    }
+}
+/*button switch*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 65px;
+    height: 30px;
+    vertical-align: middle;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $background-grey;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 5px;
+    bottom: 5px;
+    background-color: $background-brand;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+input:checked + .slider {
+    background-color: $background-primary-trans;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px $color-brand;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(34px);
+    -ms-transform: translateX(34px);
+    transform: translateX(34px);
+}
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+/*End button Switch On Off*/
+span.btn {
+    cursor: unset;
+}

@@ -1,0 +1,210 @@
+.banner-hero {
+    padding: 0px 65px 0px 15px;
+    position: relative;
+    max-width: 1770px;
+    margin: 0 auto;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 15px;
+        width: 65%;
+        height: 100%;
+        border-top-left-radius: 42px;
+        border-top-right-radius: 150px;
+        border-bottom-left-radius: 150px;
+        border-bottom-right-radius: 0px;
+        background-color: $background-5;
+        z-index: 1;
+    }
+    .banner-inner {
+        z-index: 5;
+        position: relative;
+        .banner-imgs {
+            padding: 55px 0px 0px 0px;
+            position: relative;
+            .union-icon {
+                position: absolute;
+                top: 10%;
+                left: -80px;
+            }
+            .congratulation-icon {
+                position: absolute;
+                top: 30%;
+                left: -190px;
+            }
+            .course-icon {
+                position: absolute;
+                top: 14%;
+                right: -60px;
+            }
+            .web-dev-icon {
+                position: absolute;
+                top: 50%;
+                right: -60px;
+            }
+            .docs-icon {
+                position: absolute;
+                bottom: 1%;
+                left: -75px;
+            }
+            .tick-icon {
+                position: absolute;
+                top: 80%;
+                right: -60px;
+            }
+        }
+    }
+    .text-small-primary {
+        color: $color-primary;
+        font-size: $font-md;
+        font-weight: bold;
+        font-family: $font-heading;
+        position: relative;
+        display: inline-block;
+        padding: 0px 0px 10px 25px;
+        &--disk::before {
+            content: "";
+            height: 15px;
+            width: 15px;
+            background-color: $background-4;
+            position: absolute;
+            top: 4px;
+            left: 0px;
+            border-radius: 50%;
+        }
+    }
+    .block-banner {
+        position: relative;
+        z-index: 12;
+        padding: 60px 150px 80px 80px;
+        .form-find {
+            background: #ffffff;
+            box-shadow: $box-shadow-1;
+            border-radius: 20px;
+            display: inline-block;
+            width: 100%;
+            padding: 22px 30px;
+            form {
+                display: flex;
+                width: 100%;
+            }
+            .btn-find {
+                min-width: 127px;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            .form-input {
+                border: 1px solid $border-color-3;
+                border-radius: 10px;
+                padding: 10px 20px 10px 50px;
+                display: inline-block;
+                width: 100%;
+            }
+            .select2 {
+                border: 1px solid $border-color-3;
+                border-radius: 10px;
+                padding: 10px 20px 10px 42px;
+                display: inline-block;
+                width: 100% !important;
+                margin-right: 10px;
+                &::before {
+                    content: "";
+                    background: url(../imgs/theme/icons/icon-location-2.svg) no-repeat;
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    left: 18px;
+                    top: 15px;
+                }
+                .select2-selection__arrow {
+                    background: url(../imgs/theme/icons/arrow-down.svg) no-repeat right 10px center;
+                    top: 11px;
+                    width: 26px;
+                    b {
+                        display: none !important;
+                        background-color: #9777fa;
+                    }
+                }
+            }
+            .input-keysearch {
+                background: url(../imgs/theme/icons/icon-job.svg) no-repeat left 18px center;
+            }
+        }
+        .list-tags-banner {
+            position: relative;
+            a {
+                text-decoration: none;
+                color: $color-text;
+                font-size: $font-md;
+            }
+            strong {
+                font-weight: 700;
+                font-family: $font-heading;
+                font-size: $font-md;
+                color: $color-text;
+            }
+        }
+    }
+    .heading-banner {
+        color: $color-heading;
+    }
+    .banner-description {
+        position: relative;
+        font-size: $font-md;
+    }
+}
+@keyframes hero-thumb-animation {
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+@keyframes hero-thumb-sm-animation {
+    0% {
+        -webkit-transform: translateY(-20px) translateX(50px);
+        -moz-transform: translateY(-20px) translateX(50px);
+        -ms-transform: translateY(-20px) translateX(50px);
+        transform: translateY(-20px) translateX(50px);
+    }
+    100% {
+        -webkit-transform: translateY(-20px) translateX(0px);
+        -moz-transform: translateY(-20px) translateX(0px);
+        -ms-transform: translateY(-20px) translateX(0px);
+        transform: translateY(-20px) translateX(0px);
+    }
+}
+@keyframes hero-thumb-sm-2-animation {
+    0% {
+        -webkit-transform: translateY(-50px);
+        -moz-transform: translateY(-50px);
+        -ms-transform: translateY(-50px);
+        transform: translateY(-50px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+.shape-1 {
+    -webkit-animation: hero-thumb-animation 2s linear infinite alternate;
+    -moz-animation: hero-thumb-animation 2s linear infinite alternate;
+    -o-animation: hero-thumb-animation 2s linear infinite alternate;
+    animation: hero-thumb-animation 2s linear infinite alternate;
+}
+.shape-2 {
+    -webkit-animation: hero-thumb-sm-animation 4s linear infinite alternate;
+    -moz-animation: hero-thumb-sm-animation 4s linear infinite alternate;
+    -o-animation: hero-thumb-sm-animation 4s linear infinite alternate;
+    animation: hero-thumb-sm-animation 4s linear infinite alternate;
+}
+.shape-3 {
+    -webkit-animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
+    -moz-animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
+    -o-animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
+    animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
+}

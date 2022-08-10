@@ -1,0 +1,106 @@
+//1.FONT
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap");
+$font-heading: "Montserrat", sans-serif;
+$font-text: "Open Sans", sans-serif;
+$font-3xs: 10px;
+$font-xxs: 12px;
+$font-xs: 13px;
+$font-sm: 14px;
+$font-md: 16px;
+$font-md-2: 15px;
+$font-lg: 18px;
+$font-xl: 20px;
+$font-2xl: 22px;
+$font-3xl: 58px;
+//2.COLOR
+$color-brand: #9777fa;
+$color-brand-2: #7856dd;
+$color-primary: #5192ff;
+$color-text: #37404e;
+$color-heading: #1f2938;
+$color-white: #ffffff;
+$color-menu: #080a28;
+$color-single: #586475;
+$color-submenu: #636477;
+$color-blue-dark: #1f2938;
+$color-black: #000000;
+$color-black-1: #111112;
+$color-black-3: #231d4f;
+$color-stroke-1: rgba(6, 18, 36, 0.1);
+$color-stroke-2: rgba(151, 119, 250, 0.5);
+$color-stroke-3: rgba(0, 0, 0, 0.4);
+$color-stroke-4: rgba(151, 119, 250, 0.4);
+$color-muted: #88929b;
+$color-muted-2: #9ea2ab;
+$color-gray-100: #bababa;
+$color-gray-200: #727272;
+$color-brand-mutted: rgba(151, 119, 250, 0.2);
+$color-stroke-5: rgba(8, 10, 40, 0.5);
+$color-grey: #878d96;
+$color-grey-1: #666666;
+$color-grey-2: #999;
+$color-grey-3: #9c9ca3;
+$color-grey-4: #a9a9a9;
+$color-grey-5: rgba(13, 24, 38, 0.6);
+$color-grey-6: #d2d2d2;
+//3.Boxshadow
+$box-shadow-1: 0px 18px 40px rgba(25, 15, 9, 0.1);
+$box-shadow-2: 0px 20px 60px -6px rgba(0, 0, 0, 0.04);
+$box-shadow-3: 20px 20px 54px rgba(0, 0, 0, 0.03);
+$box-shadow-3-hover: 20px 20px 54px rgba(0, 0, 0, 0.05);
+$box-shadow-4: 0px 3px 10px rgba(151, 119, 250, 0.4);
+$box-shadow-5: 0px 9px 26px 0px rgba(31, 31, 51, 0.06);
+$box-shadow-6: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+$box-shadow-7: 4px 1px 22px #eff3f8;
+//4. Border
+$border-color: #ececec;
+$border-color-1-hover: rgba(151, 119, 250, 0.5);
+$border-color-1-1-hover: rgba(151, 119, 250, 1);
+$border-color-1: rgba(6, 18, 36, 0.1);
+$border-color-3: rgba(26, 15, 9, 0.1);
+$border-color-4: rgba(26, 15, 9, 0.1);
+$border-color-5: rgba(165, 165, 165, 1);
+$border-color-6: #d1d1d1;
+$border-color-7: rgba(209, 209, 209, 1);
+$border-color-8: rgba(245, 245, 245, 1);
+//5. Background
+$background-1: #f2f3f4;
+$background-2: #f4f6fa;
+$background-3: #def9ec;
+$background-4: #72e0bf;
+$background-5: #fff9f3;
+$background-6: rgba(151, 119, 250, 0.12);
+$background-7: #f1f7ff;
+$background-8: rgba(156, 156, 163, 0.18);
+$background-9: #f9f9f9;
+$background-10: #bee2ae;
+$background-11: #9fdbe9;
+$background-12: #c5ffdc;
+$background-13: #5aa6ff;
+$background-14: #96de95;
+$background-16: rgba(81, 146, 255, 0.12);
+$background-15: rgba(239, 243, 248, 0.55);
+$background-17: #ecf4ff;
+$background-white: #ffffff;
+$background-brand: #9777fa;
+$background-brand-hover: #6d4bd3;
+$background-urgent: #ffcfc5;
+$background-head-single: #FFF9F3;
+$background-blue-light: #c5e3ff;
+$background-blue-light-2: #E9F7FF;
+$background-primary-trans: rgba(81, 146, 255, 0.3);
+$background-primary: rgba(81, 146, 255, 1);
+$background-grey: rgba(186, 186, 186, 0.3);
+$background-success: #00c070;
+$background-stroke-1: rgba(6, 18, 36, 0.1);
+// 6. text-shadow
+$text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+// 7. breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);

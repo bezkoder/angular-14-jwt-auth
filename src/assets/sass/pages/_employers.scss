@@ -1,0 +1,73 @@
+.employers-list {
+    position: relative;
+    .card-employers {
+        border: 1px solid $border-color-1;
+        padding: 26px 23px;
+        border-radius: 10px;
+        background-color: $background-white;
+        margin-bottom: 30px;
+        &:hover {
+            box-shadow: $box-shadow-2;
+            border: 1px solid $border-color-1-hover;
+        }
+        .employers-name {
+            h5 {
+                font-size: 18px;
+                a {
+                    color: $color-heading;
+                }
+                &:hover a {
+                    color: $color-brand;
+                }
+            }
+            .rate {
+                margin-left: -20px;
+            }
+        }
+        .employers-info {
+            i {
+                font-size: 20px;
+                color: $color-muted;
+                margin-left: 10px;
+            }
+        }
+        .card-grid-2-link {
+            text-align: right;
+            i {
+                font-size: 20px;
+                color: $color-muted;
+                margin-left: 10px;
+            }
+        }
+        .btn-brand-hover {
+            border: thin solid $border-color-1-hover;
+            font-size: 14px;
+        }
+        .employers-logo {
+            img {
+                max-width: 110px;
+            }
+            &.online {
+                figure {
+                    position: relative;
+                    display: inline-block;
+                    &::before {
+                        height: 18px;
+                        width: 18px;
+                        border-radius: 50%;
+                        content: "";
+                        position: absolute;
+                        bottom: 13px;
+                        right: 9px;
+                        background: #00c070;
+                    }
+                }
+            }
+        }
+    }
+}
+.employers-header-2 {
+    border-bottom: thin solid $border-color;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}

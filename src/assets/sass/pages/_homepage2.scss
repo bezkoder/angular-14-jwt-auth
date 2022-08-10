@@ -1,0 +1,72 @@
+.mw-720
+{
+    max-width: 720px;
+    margin: auto;
+    display: table !important;
+    table-layout: fixed;
+}
+.banner-home-3
+{
+    .banner-hero
+    {
+        &::before
+        {
+            display: none;
+        }
+        .block-banner
+        {
+            padding-right: 80px;
+        }
+    }
+    position: relative;
+    padding-bottom: 140px !important;
+    &::before
+    {
+        content: "";
+        height: 351px;
+        width: 400px;
+        position: absolute;
+        bottom: 40px;;
+        left: 40px;
+        background: url(../imgs/theme/designer.svg) no-repeat 0px 0px;
+        background-size: contain;
+    }
+    &::after
+    {
+        content: "";
+        height: 351px;
+        width: 400px;
+        position: absolute;
+        bottom: 40px;;
+        right: 20px;
+        background: url(../imgs/theme/working.svg) no-repeat 0px 0px;
+        background-size: contain;
+    }
+}
+.list-job-2-col
+{
+    .card-job-description
+    {
+        font-size: $font-sm;
+        line-height: 22px;
+    }
+}
+.findjob-homepage-2
+{
+    &::before
+    {
+        right: 100px !important;
+        bottom: -55px !important;
+    }
+}
+.block-job-bg-homepage-2
+{
+    &::before
+    {
+        right: 0px !important;
+    }
+}
+.none-bg-body
+{
+    background: $background-white;
+}
