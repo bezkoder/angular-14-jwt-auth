@@ -1,21 +1,22 @@
-
 <div class="d-flex flex-column flex-root">
   <div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login">
     <div class="col-md-6 d-none d-md-flex bg-image">
     </div>
-    <div
-      class="login-content flex-row-fluid d-flex flex-column justify-content-center position-relative overflow-hidden p-7 mx-auto">
+    <div class="login-content flex-row-fluid d-flex flex-column justify-content-center position-relative overflow-hidden p-7 mx-auto">
       <div class="d-flex flex-column-fluid flex-center">
         <div class="login-form login-signin">
-          <form class="form fv-plugins-bootstrap fv-plugins-framework" novalidate="novalidate">
+          <br>
+          <form class="form fv-plugins-bootstrap fv-plugins-framework" novalidate="novalidate" id="kt_login_signin_form">
             <div class="pb-13 pt-lg-0 pt-5">
-              <h3 class="font-weight-bolder text-dark font-size-h4 font-size-h1-lg" style="color: #9777fa">Welcome to KorcaHunter</h3>
-              <span class="text-muted font-weight-bold font-size-h4">New Here?
-									<a routerLink="/register" class="text-primary font-weight-bolder" style="color: #9777fa">Apply for access</a></span>
+              <div class="pb-13 pt-lg-0 pt-5">
+                <h3 class="font-weight-bolder text-dark font-size-h4 font-size-h1-lg">Register new user</h3>
+                <p class="text-muted font-weight-bold font-size-h4">Become part of exposing new talents</p>
+              </div>
             </div>
             <form
+              *ngIf="!isSuccessful"
               name="form"
-              (ngSubmit)="onSubmit()"
+              (ngSubmit)="f.form.valid && onSubmit()"
               #f="ngForm"
               novalidate
             >
@@ -25,23 +26,29 @@
                        type="text"
                        name="username"
                        [(ngModel)]="form.username"
-                       required
+                       maxlength="20"
                        #username="ngModel"
                        id="username"
                        autocomplete="off">
               </div>
-
+              <div class="form-group fv-plugins-icon-container">
+                <label for="email" class="font-size-h6 font-weight-bolder text-dark">Email</label>
+                <input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg"
+                       type="email"
+                       name="email"
+                       [(ngModel)]="form.email"
+                       maxlength="100"
+                       #email="ngModel"
+                       id="email"
+                       autocomplete="off">
+              </div>
               <div class="form-group fv-plugins-icon-container">
                 <div class="d-flex justify-content-between mt-n5">
-                  <label for="password" class="font-size-h6 font-weight-bolder text-dark pt-5">Password</label>
-                  <a class="text-primary font-size-h6 font-weight-bolder text-hover-primary pt-5" style="color: #9777fa" id="kt_login_forgot">Forgot
-                    Password ?</a>
+                  <label for="password" class="font-size-h6 font-weight-bolder text-dark pt-5" style="padding-top: 4.25rem !important;">Password</label>
                 </div>
                 <input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg"
                        type="password"
                        [(ngModel)]="form.password"
-                       required
-                       minlength="6"
                        #password="ngModel"
                        name="password"
                        id="password"
@@ -49,19 +56,12 @@
                 <div class="fv-plugins-message-container"></div>
               </div>
               <div class="form-group pb-lg-0 pb-5">
-                <button type="submit" class="btn btn-primary
-                font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3" style="background-color: #9777fa; border-color:#9777fa">Sign In
-                </button>
-                <button type="button" class="btn btn-light-primary font-weight-bolder px-8 py-4 my-3 font-size-lg">
-              
-                </button>
+                <button type="submit"  class="btn btn-primary
+              font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3" style="background-color: #9777fa; border-color:#9777fa">Sign Up</button>
               </div>
             </form>
-            <input type="hidden">
-            <div></div>
-          </form>
+            <input type="hidden"><div></div></form>
         </div>
-
       </div>
     </div>
   </div>

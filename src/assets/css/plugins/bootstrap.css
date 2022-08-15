@@ -620,7 +620,7 @@ progress {
 }
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1140px;
+    max-width: 1340px; !important;
   }
 }
 @media (min-width: 1400px) {
@@ -5364,7 +5364,7 @@ textarea.form-control-lg {
 }
 @media (min-width: 1200px) {
   .modal-xl {
-    max-width: 1140px;
+    max-width: 1340px !important;
   }
 }
 .modal-fullscreen {

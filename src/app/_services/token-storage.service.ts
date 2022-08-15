@@ -20,7 +20,7 @@ export class TokenStorageService {
   }
 
   public getToken():any {
-    return sessionStorage.getItem(TOKEN_KEY);
+    return sessionStorage.getItem(TOKEN_KEY) || '{}';
   }
 
   public saveUser(user: any): void {
@@ -28,7 +28,8 @@ export class TokenStorageService {
     window.sessionStorage.setItem(USER_KEY, JSON.stringify(user));
   }
 
-  public getUser(): any {
-    // return JSON.parse(sessionStorage.getItem(USER_KEY));
+  getUser(): any {
+    return JSON.parse(sessionStorage.getItem(USER_KEY) || '{}');
+
   }
 }

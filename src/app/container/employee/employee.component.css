@@ -1,0 +1,23 @@
+.red-circle{
+  height: 20px;
+  width: 20px;
+  background-color: #B00000 ;
+  border-radius: 50%;
+  display: inline-block;
+}
+.green-circle{
+  height: 20px;
+  width: 20px;
+  background-color: #009900;
+  border-radius: 50%;
+  display: inline-block;
+}
+.lastname{
+  margin-left: 450px;
+  margin-top: 15px;
+}
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1340px !important;
+  }
+}

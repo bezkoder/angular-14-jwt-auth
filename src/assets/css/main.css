@@ -910,6 +910,7 @@ h6 {
   line-height: 1;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+
 }
 
 .btn.btn-default {
@@ -923,6 +924,8 @@ h6 {
           transform: translateY(-2px);
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  color: #ffffff;
+
 }
 
 .btn-grey-small {
@@ -1077,11 +1080,12 @@ h6 {
 }
 
 .btn-tags-sm {
-  padding: 10px 18px;
+  padding: 15px 25px 15px 25px !important;
   background: rgba(81, 146, 255, 0.12);
   border-radius: 50px;
+  margin-left: 2px;
   font-size: 14px;
-  line-height: 12px;
+  line-height: 55px;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
   color: #727272;
@@ -4939,7 +4943,7 @@ label {
 }
 
 /***************************
-    Page section margin 
+    Page section margin
 ****************************/
 .mtb-0 {
   margin: 0;

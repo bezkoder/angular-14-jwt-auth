@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from "../_services/auth.service";
-import {TokenStorageService} from "../_services/token-storage.service";
+import {AuthService} from "../../_services/auth.service";
+import {TokenStorageService} from "../../_services/token-storage.service";
 import {Router} from "@angular/router";
 import { ToastrService } from 'ngx-toastr';
 
@@ -17,7 +17,10 @@ export class LoginComponent implements OnInit {
   errorMessage = '';
   roles: string[] = [];
 
-  constructor(private authService: AuthService,   private toastr: ToastrService,private tokenStorage: TokenStorageService, private router: Router) { }
+  constructor(private authService: AuthService,
+              private toastr: ToastrService,
+              private tokenStorage: TokenStorageService,
+              private router: Router) { }
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
@@ -29,12 +32,12 @@ export class LoginComponent implements OnInit {
   onSubmit(): void {
     this.authService.login(this.form).subscribe(
       data => {
-        
-        this.router.navigateByUrl('/user');
+
+        this.router.navigateByUrl('/employee');
         this.tokenStorage.saveToken(data.accessToken);
         this.tokenStorage.saveUser(data);
         this.toastr.success(
-          `You have successfully login!`,
+          `You have successfully logged in!`,
           'Success'
         );
         this.isLoginFailed = false;

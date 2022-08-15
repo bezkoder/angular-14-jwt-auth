@@ -3,8 +3,9 @@
     <div class="container">
       <div class="main-header">
         <div class="header-left">
+
           <div class="header-logo">
-            <a href="home" class="d-flex">
+            <a  class="d-flex">
               <img alt="jobhub" src="assets/imgs/theme/jobhub-logo.svg" />
             </a>
           </div>
@@ -15,19 +16,21 @@
                   <a class="active" href="home">Home</a>
                 </li>
                 <li class="">
-                  <a href="employee">Candidates</a>
+                  <a href="employee">Employees</a>
                 </li>
-                <li class="has-children">
-                  <a class="active">Create</a>
-                  <ul class="sub-menu">
-                    <li><a href="create-employee">Add Candidate</a></li>
-                    <li><a href="register">Add User</a></li>
-                </ul>
-                </li>
+<!--                <li class="has-children">-->
+<!--                  <a class="active">Create</a>-->
+<!--                  <ul class="sub-menu">-->
+<!--                    <li><a href="create-employee">Add Candidate</a></li>-->
+<!--                    <li><a href="register">Add User</a></li>-->
+<!--                </ul>-->
+<!--                </li>-->
               </ul>
             </nav>
           </div>
         </div>
+        <p style="margin-left:390px; margin-top: 15px"> Welcome <strong>{{username}}</strong></p>
+
         <div class="header-right">
           <div class="block-signin">
             <a (click)="logout()" class="btn btn-default btn-shadow ml-40 hover-up">Log out</a>
@@ -42,6 +45,7 @@
     <section class="section-box-2">
       <div class="box-head-single none-bg">
         <div class="container">
+          <p> Welcome <strong>{{username}}</strong></p>
           <h4>There Are 968 Candidates<br />Here For You!</h4>
           <div class="row mt-15 mb-40">
             <div class="col-lg-7 col-md-9">
@@ -50,7 +54,7 @@
             </div>
             <div class="col-lg-5 col-md-3 text-lg-end text-start">
               <ul class="breadcrumbs mt-sm-15">
-                <li><a href="#">Home</a></li>
+                <li><a href="home">Home</a></li>
                 <li>Employees listing</li>
               </ul>
             </div>
@@ -97,18 +101,21 @@
                   <div class="card-grid-2-link">
                     <a *ngIf="employee.active==true"><i class="green-circle"></i></a>
                     <a *ngIf="employee.active==false"><i class="red-circle"></i></a>
+<!--                    <a ><i class="fi-rr-edit" style="cursor: pointer"></i></a>-->
+
+                    <a *ngIf="employee.active==true"></a>
                   </div>
-                  <div class="text-center card-grid-2-image-rd online">
+                  <div class="text-center card-grid-2-image-rd ">
                     <!--                <a href="candidates-single.html">-->
                     <figure>
                       <img src="{{employee.imagePath}}"
-                        style="min-width: 70px; min-height: 90px; border-radius: 50%" alt="image"> 
+                        style="min-width: 70px; min-height: 90px; border-radius: 50%" alt="image">
                       </figure>
                     <!--                </a>-->
                   </div>
                   <div class="card-block-info">
                     <div class="card-profile">
-                      <a href="candidates-single.html"><strong>{{employee.name}}</strong></a>
+                      <a [routerLink]="['employee-details', employee.id]"><strong>{{employee.name}}</strong></a>
                       <span class="text-sm">{{employee.email}}</span>
                       <div class="rate-reviews-small">
                         <span><img src="assets/imgs/theme/icons/star.svg" alt="jobhub" /></span>
@@ -120,14 +127,14 @@
                       </div>
                     </div>
                     <div class="employers-info d-flex align-items-center justify-content-center mt-15">
-                      <span class="d-flex align-items-center"><i class="fi-rr-marker mr-5 ml-0"></i>
+                      <span class="d-flex align-items-center"><i class="fi-rr-marker  ml-0">&nbsp;</i>
                         {{employee.city}},{{employee.country}}</span>
                       <span class="d-flex align-items-center ml-25"><i
-                          class="fi-rr-briefcase mr-5"></i>{{employee.actualPosition}}</span>
+                          class="fi-rr-briefcase">&nbsp;</i>{{employee.actualPosition}}</span>
                     </div>
                     <div class="card-2-bottom card-2-bottom-candidate mt-30 ">
                       <div class="text-center">
-                        <a class=" btn-tags-sm mb-10 mr-5" *ngFor="let skill of employee.skills"> {{skill}}</a>
+                        <a class="btn-tags-sm mb-10" *ngFor="let skill of employee.skills"> {{skill}}</a>
                       </div>
                       <div class="text-center mt-25 mb-5">
                         <a [routerLink]="['employee-details', employee.id]" class="btn btn-border btn-brand-hover">View
@@ -146,47 +153,47 @@
       <div class="container">
         <ul class="list-partners">
           <li class="wow animate__animated animate__fadeInUp hover-up" data-wow-delay="0s">
-            <a href="#">
+            <a>
               <figure><img alt="jobhub" src="assets/imgs/jobs/logos/samsung.svg" /></figure>
             </a>
           </li>
           <li class="wow animate__animated animate__fadeInUp hover-up" data-wow-delay=".1s">
-            <a href="#">
+            <a>
               <figure><img alt="jobhub" src="assets/imgs/jobs/logos/google.svg" /></figure>
             </a>
           </li>
           <li class="wow animate__animated animate__fadeInUp hover-up" data-wow-delay=".2s">
-            <a href="#">
+            <a>
               <figure><img alt="jobhub" src="assets/imgs/jobs/logos/facebook.svg" /></figure>
             </a>
           </li>
           <li class="wow animate__animated animate__fadeInUp hover-up" data-wow-delay=".3s">
-            <a href="#">
+            <a>
               <figure><img alt="jobhub" src="assets/imgs/jobs/logos/pinterest.svg" /></figure>
             </a>
           </li>
           <li class="wow animate__animated animate__fadeInUp hover-up" data-wow-delay=".4s">
-            <a href="#">
+            <a>
               <figure><img alt="jobhub" src="assets/imgs/jobs/logos/avaya.svg" /></figure>
             </a>
           </li>
           <li class="wow animate__animated animate__fadeInUp hover-up" data-wow-delay=".5s">
-            <a href="#">
+            <a>
               <figure><img alt="jobhub" src="assets/imgs/jobs/logos/forbes.svg" /></figure>
             </a>
           </li>
           <li class="wow animate__animated animate__fadeInUp hover-up" data-wow-delay=".1s">
-            <a href="#">
+            <a>
               <figure><img alt="jobhub" src="assets/imgs/jobs/logos/avis.svg" /></figure>
             </a>
           </li>
           <li class="wow animate__animated animate__fadeInUp hover-up" data-wow-delay=".2s">
-            <a href="#">
+            <a>
               <figure><img alt="jobhub" src="assets/imgs/jobs/logos/nielsen.svg" /></figure>
             </a>
           </li>
           <li class="wow animate__animated animate__fadeInUp hover-up" data-wow-delay=".3s">
-            <a href="#">
+            <a>
               <figure><img alt="jobhub" src="assets/imgs/jobs/logos/doordash.svg" /></figure>
             </a>
           </li>

@@ -1,0 +1,253 @@
+<body>
+  <header class="header sticky-bar">
+    <div class="container">
+      <div class="main-header">
+        <div class="header-left">
+          <div class="header-logo">
+            <a href="index.html" class="d-flex"><img alt="jobhub" src="assets/imgs/theme/jobhub-logo.svg" /></a>
+          </div>
+          <div class="header-nav">
+            <nav class="nav-main-menu d-none d-xl-block">
+              <ul class="main-menu">
+                <li class="">
+                  <a class="active" href="home">Home</a>
+                </li>
+                <li class="">
+                  <a href="employee">Employees</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="block-signin">
+            <a (click)="logout()" class="btn btn-default btn-shadow ml-40 hover-up">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--End header-->
+  <!-- Content -->
+
+  <main class="background">
+    <section class="section-box">
+      <div class="box-head-single box-head-single-candidate">
+        <div class="container" style="margin-top: 120px">
+          <div class="heading-image-rd online">
+            <a href="#">
+              <figure><img src="{{employees?.imagePath}}" style="min-width: 70px; min-height: 90px; border-radius: 50%"
+                  alt="image"></figure>
+            </a>
+          </div>
+          <div class="heading-main-info">
+            <h4>{{employees.name}} {{employees.lastname}}</h4>
+            <div class="head-info-profile">
+              <span class="text-small mr-20"><i class="fi-rr-marker text-mutted"></i>
+                {{employees.city}},{{employees.country}}</span>
+              <span class="text-small mr-20"><i
+                  class="fi-rr-briefcase text-mutted"></i>{{employees.actualPosition}}</span>
+              <span class="text-small" style="margin-right: 10px"><i
+                  class="fi fi-rr-id-badge text-mutted"></i>{{employees.age}} years old</span>
+              <span class="text-small"><i class="fi fi-rr-phone-call text-mutted"></i>{{employees.phone}}</span>
+              <span class="text-small" style="margin-left: 10px"><i
+                  class="fi fi-rr-check text-mutted"></i>{{employees.active}}</span>
+
+              <div class="rate-reviews-small">
+                <span><img src="assets/imgs/theme/icons/star.svg" alt="jobhub" /></span>
+                <span><img src="assets/imgs/theme/icons/star.svg" alt="jobhub" /></span>
+                <span><img src="assets/imgs/theme/icons/star.svg" alt="jobhub" /></span>
+                <span><img src="assets/imgs/theme/icons/star.svg" alt="jobhub" /></span>
+                <span><img src="assets/imgs/theme/icons/star.svg" alt="jobhub" /></span>
+                <span class="ml-10 text-muted text-small">(5.0)</span>
+              </div>
+            </div>
+            <div class="row align-items-end">
+              <div class="col-lg-6">
+                {{employees.skills}}
+              </div>
+              <div class="col-lg-3">
+                <a class="btn btn-default" target="_self" href="{{employees.cvPath}}" (click)="openCv()">Download CV</a>
+
+              </div>
+
+              <div class="col-lg-3 text-lg-end">
+                <ul class="breadcrumbs mt-10">
+                  <li><a href="employee">Home</a></li>
+                  <li>{{employees.name}} {{employees.lastname}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="section-box mt-50">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-12 col-sm-12 col-12">
+            <div class="content-single">
+              <h4 class="mb-20">Biography</h4>
+              <p>
+                Hi, I am <strong>{{employees.name}} {{employees.lastname}}</strong>
+                {{employees.description}}
+
+              </p>
+              <div class="divider"></div>
+              <h4 class="mb-20 mt-25">Work Experience</h4>
+              <div class="row" *ngFor="let el of experiences">
+
+                <div class="col-md-4 col-sm-6 col-12 mb-60">
+                  <strong class="text-md-bold"></strong>
+                  <span class="dis-block text-muted text-md-lh24">
+                    {{el.city}}, {{el.country}}<br />
+                    {{el.startDate | date}}-{{el.endDate | date}}
+                  </span>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 mb-60">
+                  <strong class="text-md-bold">{{el.name}}</strong>
+                  <span class="dis-block text-muted text-md-lh24">
+                    {{el.description}}<br>
+                  </span>
+                </div>
+              </div>
+              <div class="divider"></div>
+              <h4 class="mt-30 mb-30">Representative Video</h4>
+              <video [src]="url" height="300" width="650px" controls></video>
+
+<!--              <video src={{employees.videoPath}} style="width: 650px; border-radius: 0" alt="video"-->
+<!--                onloadedmetadata="this.muted = false"></video>-->
+
+              <div class="divider"></div>
+              <h4 class="mt-30 mb-30">Education</h4>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    {{employees.education}}
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <p class="text-muted lh-32">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis illum fuga eveniet. Deleniti
+                    asperiores, commodi quae ipsum quas est itaque
+                  </p>
+                </div>
+              </div>
+              <div class="divider"></div>
+              <h4 class="mb-10 mt-30">Soft Skills</h4>
+              <div class="block-progress-status">
+                <div class="item-progress">
+                  <div class="title-progress"><strong class="text-md-bold">Communication</strong> {{communication}}/100</div>
+                  <div class="info-progress">
+                    <div class="progress">
+                      <div [style.width.%]=communication class="progress-bar"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-progress">
+                  <div class="title-progress"><strong class="text-md-bold">Critical Thinking</strong> {{criticalThinking}}/100</div>
+                  <div class="info-progress">
+                    <div class="progress">
+                      <div  [style.width.%]=criticalThinking class="progress-bar"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-progress">
+                  <div class="title-progress"><strong class="text-md-bold">Positive Attitude</strong>  {{positiveAttitude}}/100</div>
+                  <div class="info-progress">
+                    <div class="progress">
+                      <div [style.width.%]=positiveAttitude class="progress-bar"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-progress">
+                  <div class="title-progress"><strong class="text-md-bold">Leadership  <br>   </strong>  {{leadership}}/100</div>
+                  <div class="info-progress">
+                    <div class="progress">
+                      <div [style.width.%]=leadership class="progress-bar"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-progress">
+                  <div class="title-progress"><strong class="text-md-bold">Teamwork  <br>   </strong> {{teamwork}}/100</div>
+                  <div class="info-progress">
+                    <div class="progress">
+                      <div [style.width.%]=teamwork class="progress-bar"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 col-12 pl-40 pl-lg-15 mt-lg-30">
+            <div class="sidebar-shadow">
+              <h5 class="font-bold">Overview</h5>
+              <div class="sidebar-list-job mt-10">
+                <ul>
+                  <li>
+                    <div class="sidebar-icon-item"><i class="fi-rr-briefcase"></i></div>
+                    <div class="sidebar-text-info">
+                      <span class="text-description">Experience</span>
+                      <strong class="small-heading">{{employees.tabData.tabExperience}}</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="sidebar-icon-item"><i class="fi-rr-marker"></i></div>
+                    <div class="sidebar-text-info">
+                      <span class="text-description">From</span>
+                      <strong class="small-heading">{{employees.city}},<br />{{employees.country}}</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="sidebar-icon-item"><i class="fi-rr-dollar"></i></div>
+                    <div class="sidebar-text-info">
+                      <span class="text-description">Salary</span>
+                      <strong class="small-heading">{{employees.tabData.salary}}</strong>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="sidebar-icon-item"><i class="fi-rr-clock"></i></div>
+                    <div class="sidebar-text-info">
+                      <span class="text-description">Member since</span>
+                      <strong class="small-heading">{{employees.tabData.userFrom}}</strong>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="sidebar-shadow">
+              <h5 class="sidebar-title">Overview</h5>
+              <div class="block-tags">
+                <a  class="btn btn-tags-sm mb-10 mr-5"  *ngFor="let item of overview">{{item}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <!-- End Content -->
+  <!-- Footer -->
+  <footer class="footer mt-50">
+    <div class="container">
+      <div class="footer-bottom mt-50">
+        <div class="row">
+          <div class="col-md-6">
+            Copyright ©2022 <a ><strong>AME</strong></a>. All Rights Reserved
+          </div>
+          <div class="col-md-6 text-md-end text-start">
+            <div class="footer-social">
+              <a href="#" class="icon-socials icon-facebook"></a>
+              <a href="#" class="icon-socials icon-twitter"></a>
+              <a href="#" class="icon-socials icon-instagram"></a>
+              <a href="#" class="icon-socials icon-linkedin"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>

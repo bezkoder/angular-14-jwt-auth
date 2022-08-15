@@ -1,23 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { Employee } from '../_model/employee';
-import { EmployeeService } from '../_services/employee.service';
-import { Subscribe } from '../_model/subscribe';
-import { SubscribeService } from '../_services/subscribe.service';
+import { Employee } from '../../_model/employee';
+
 import { Router } from '@angular/router';
-import { TokenStorageService } from '../_services/token-storage.service';
 import { ToastrService } from 'ngx-toastr';
+import {TokenStorageService} from "../../_services/token-storage.service";
+import {SubscribeService} from "../../_services/subscribe.service";
+import {EmployeeService} from "../../_services/employee.service";
 
 @Component({
-  selector: 'app-board-user',
-  templateUrl: './board-user.component.html',
-  styleUrls: ['./board-user.component.css']
+  selector: 'app-employee',
+  templateUrl: './employee.component.html',
+  styleUrls: ['./employee.component.css'],
 })
-export class BoardUserComponent implements OnInit {
+export class EmployeeComponent implements OnInit {
   loading = false;
   employees: Employee[] = [];
   searchTerm: string = '';
   subscribeEmail: string = '';
   skills: string[] = [];
+  username!:string | null | any;
 
   constructor(
     private toastr: ToastrService,
@@ -28,6 +29,8 @@ export class BoardUserComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.getEmployees();
+    this.username = this.tokenStorageService.getUser().username;
+console.log(this.username)
   }
   search() {
     console.log(this.searchTerm);
