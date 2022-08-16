@@ -15,8 +15,9 @@ export class EmployeeDetailsComponent implements OnInit {
   employees: Employee = {};
   experiences!: any[] | undefined;
   overview!: any[] | undefined;
-  username!: string;
   url!: string | undefined ;
+  username!:string | null | any;
+
 
   public communication: Number | undefined;
   public criticalThinking: Number | undefined;
@@ -38,6 +39,7 @@ export class EmployeeDetailsComponent implements OnInit {
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
     this.getEmployee(this.id)
     this.url =  this.employees?.videoPath
+    this.username = this.tokenStorageService.getUser().username;
 
   }
 
