@@ -16,8 +16,8 @@
   margin-left: 450px;
   margin-top: 15px;
 }
-@media (min-width: 1200px) {
-  .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 1340px !important;
-  }
-}
+/*@media (min-width: 1200px) {*/
+/*  .container, .container-sm, .container-md, .container-lg, .container-xl {*/
+/*    max-width: 1340px !important;*/
+/*  }*/
+/*}*/
