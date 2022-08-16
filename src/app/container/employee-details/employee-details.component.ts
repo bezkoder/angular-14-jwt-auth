@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {Employee} from "../../_model/employee";
 import {ActivatedRoute, Router} from "@angular/router";
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder} from "@angular/forms";
 import {TokenStorageService} from "../../_services/token-storage.service";
 import {EmployeeService} from "../../_services/employee.service";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-employee-details',
@@ -32,6 +33,7 @@ export class EmployeeDetailsComponent implements OnInit {
               private activatedRoute: ActivatedRoute,
               private _formBuilder: FormBuilder,
               private router: Router,
+              private toastr: ToastrService,
               private tokenStorageService: TokenStorageService
   ) { }
 
@@ -60,16 +62,14 @@ export class EmployeeDetailsComponent implements OnInit {
          this.teamwork = this.employees.softskills.Teamwork * 10
           this.url =  this.employees?.videoPath
 
-          console.log(data);
         },
         error => {
-          console.log(error);
+          this.toastr.error(error.error.message,"Something went wrong")
         });
   }
 
   logout(): void {
     this.tokenStorageService.signOut();
-    // window.location.reload();
     this.router.navigateByUrl('login');
   }
 

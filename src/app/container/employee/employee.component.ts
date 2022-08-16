@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../../_model/employee';
-
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import {TokenStorageService} from "../../_services/token-storage.service";
@@ -27,20 +26,18 @@ export class EmployeeComponent implements OnInit {
     private router: Router,
     private tokenStorageService: TokenStorageService
   ) {}
+
   ngOnInit(): void {
     this.getEmployees();
     this.username = this.tokenStorageService.getUser().username;
-console.log(this.username)
   }
   search() {
-    console.log(this.searchTerm);
     this.employeeService.getAllSearchEmployees(this.searchTerm).subscribe(
       (data) => {
         this.employees = data.data;
       },
       (error) => {
-        console.log(error);
-        this.toastr.error(`${error.message}`, 'Error');
+        this.toastr.error(`${error.message}`, 'Something went wrong');
       }
     );
   }
@@ -57,8 +54,7 @@ console.log(this.username)
         this.subscribeEmail = ''
       },
       (error: any) => {
-        console.log(error)
-        this.toastr.error(`${error.error.error}`, 'Error');
+        this.toastr.error(`${error.error.error}`, 'Something went wrong');
       }
     );
   }
@@ -68,19 +64,15 @@ console.log(this.username)
       (data) => {
         this.employees = data.data;
         this.skills = data.data.skills;
-        console.log(this.skills);
-        console.log(data);
       },
       (error) => {
+        this.toastr.error(error.error.message,"Something went wrong")
         if (error.status === 401) {
           this.router.navigate(['/login']);
         }
-        console.log(error);
       }
     );
   }
-
-
 
   employeDetails(id: any) {
     this.router.navigate(['employee-details'], id);
@@ -88,7 +80,6 @@ console.log(this.username)
 
   logout(): void {
     this.tokenStorageService.signOut();
-    // window.location.reload();
     this.router.navigateByUrl('login');
   }
 }

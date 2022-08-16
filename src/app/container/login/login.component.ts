@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit {
     if (this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
       this.roles = this.tokenStorage.getUser().roles;
-      // this.gotoDashboard()
     }
   }
 
@@ -43,14 +42,15 @@ export class LoginComponent implements OnInit {
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.tokenStorage?.getUser().roles;
-        // this.reloadPage();
 
       },
-      err => {
-        console.error(err)
-        this.errorMessage = err.error.message;
-        this.toastr.error(`${err.error.message}`, 'Error');
+      error => {
+        this.errorMessage = error.error.message;
+        this.toastr.error(`${error.error.message}`, 'Error');
         this.isLoginFailed = true;
+        if(error.status == '401'){
+          this.router.navigateByUrl('/login');
+        }
       }
     );
   }
