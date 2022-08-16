@@ -22,7 +22,5 @@ export class Employee{
     experience? : any[];
     softskills? : any;
     tabData? : any;
-  
   }
-  
-  
+

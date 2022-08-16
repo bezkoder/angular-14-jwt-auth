@@ -23,10 +23,6 @@ export class EmployeeDetailsComponent implements OnInit {
   public positiveAttitude: Number | undefined;
   public leadership: Number | undefined;
   public teamwork: Number | undefined;
-  // currentEmployee: Employee | any;
-  // fourthFormGroup: FormGroup = this._formBuilder.group({skills: [''], imagePath: [''], videoPath:[''], cvPath:['']});
-
-
   private id: any;
 
   constructor(private employeeService: EmployeeService,
@@ -41,9 +37,7 @@ export class EmployeeDetailsComponent implements OnInit {
 
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
     this.getEmployee(this.id)
-
     this.url =  this.employees?.videoPath
-    console.log(this.employees?.videoPath)
 
   }
 
@@ -53,7 +47,6 @@ export class EmployeeDetailsComponent implements OnInit {
         (data: {data: Employee}) => {
           this.employees = data.data;
           this.experiences = this.employees.experience;
-
           this.overview = this.employees.tabData.overview
          this.communication = this.employees.softskills.Communication * 10
          this.criticalThinking = this.employees.softskills.CriticalThinking * 10
