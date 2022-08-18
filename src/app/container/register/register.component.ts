@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
         (data: any) => {
         console.log(data);
         this.isSuccessful = true;
-          this.router.navigateByUrl('employee');
+          this.router.navigateByUrl('login');
           this.toastr.success('New user added successfully', 'Success')
       },
         (err: { error: { message: string; }; }) => {
