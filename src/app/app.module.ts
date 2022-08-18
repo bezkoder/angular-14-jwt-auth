@@ -18,18 +18,10 @@ import {ContainerModule} from "./container/container.module";
   ],
   imports: [
     BrowserModule,
-    // MatSidenavModule,
-    // MatToolbarModule,
-    // MatIconModule,
-    // MatDividerModule,
-    // MatButtonModule,
     RouterModule,
-    // MatListModule,
     ContainerModule,
     NoopAnimationsModule,
     HttpClientModule,
-    // MatFormFieldModule,
-    // MatInputModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     FormsModule

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+const USER_KEY = 'auth-user';
 
 @Component({
   selector: 'app-home',
@@ -11,5 +12,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  public isLoggedIn(): boolean {
+    const user = window.sessionStorage.getItem(USER_KEY);
+    if (user) {
+      return true;
+    }
 
+    return false;
+  }
 }

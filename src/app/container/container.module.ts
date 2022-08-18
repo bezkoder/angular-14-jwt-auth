@@ -1,6 +1,6 @@
 import {CommonModule} from "@angular/common";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {RouterModule} from "@angular/router";
+import {RouterModule, Routes} from "@angular/router";
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
@@ -21,7 +21,8 @@ import {LoginComponent} from "./login/login.component";
   ],
   exports: [
   ],
-    imports: [
+
+  imports: [
         BrowserModule,
         RouterModule,
         CommonModule,
@@ -32,16 +33,14 @@ import {LoginComponent} from "./login/login.component";
         BrowserAnimationsModule,
 
         RouterModule.forRoot([
-          {path: 'register', component: RegisterComponent},
-          {path: 'login', component: LoginComponent},
+
+          { path: '', pathMatch: "full", redirectTo: 'home' },
           {path: 'home', component: HomeComponent},
-            {path: 'employee', component: EmployeeComponent},
-            {path: 'employee/employee-details/:id', component: EmployeeDetailsComponent},
-
-
+          {path: 'login', component: LoginComponent},
+          {path: 'register', component: RegisterComponent},
+          {path: 'employee', component: EmployeeComponent},
+          {path: 'employee/employee-details/:id', component: EmployeeDetailsComponent},
         ]),
-
-
     ]
 })
 export class ContainerModule { }
