@@ -27,7 +27,6 @@ export class RegisterComponent implements OnInit {
   onSubmit(): void {
     this.authService.register(this.form).subscribe(
         (data: any) => {
-        console.log(data);
         this.isSuccessful = true;
           this.router.navigateByUrl('login');
           this.toastr.success('New user added successfully', 'Success')
