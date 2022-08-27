@@ -66,7 +66,6 @@ export class EmployeeComponent implements OnInit {
         this.skills = data.data.skills;
       },
       (error) => {
-        this.toastr.error(error.error.message,"Something went wrong")
         if (error.status === 401) {
           this.router.navigate(['/login']);
         }
