@@ -6,27 +6,27 @@
 
           <div class="header-logo">
             <a  class="d-flex">
-              <img alt="Youth Net Albania" src="assets/imgs/theme/jobhub-logo.svg" />
+              <img alt="Youth Net Albania" src="../../../assets/imgs/theme/logo.png" />
             </a>
           </div>
           <div class="header-nav">
 <!--            <nav class="nav-main-menu d-none d-xl-block">-->
               <ul class="main-menu">
                 <li class="">
-                  <a class="active" href="home">Home</a>
+                  <a class="active" href="home">Kryefaqja</a>
                 </li>
                 <li class="">
-                  <a href="employee">Employees</a>
+                  <a href="employee">Kandidatët</a>
                 </li>
               </ul>
 <!--            </nav>-->
           </div>
         </div>
-        <p style="margin-left:390px; margin-top: 15px"> Welcome <strong>{{username}}</strong></p>
+        <p style="margin-left:390px; margin-top: 15px"> Mirë se erdhe <strong>{{username}}</strong></p>
 
         <div class="header-right">
           <div class="block-signin">
-            <a (click)="logout()" class="btn btn-default btn-shadow ml-40 hover-up">Log out</a>
+            <a (click)="logout()" class="btn btn-default btn-shadow ml-40 hover-up">Dil</a>
           </div>
         </div>
       </div>
@@ -38,17 +38,16 @@
     <section class="section-box-2">
       <div class="box-head-single none-bg">
         <div class="container">
-          <p> Welcome <strong>{{username}}</strong></p>
-          <h4>There Are 968 Candidates<br />Here For You!</h4>
+          <p> Mirë se erdhe <strong>{{username}}</strong></p>
+          <h4>Më poshtë janë listuar 100 Kandidate<br />Për ju!</h4>
           <div class="row mt-15 mb-40">
             <div class="col-lg-7 col-md-9">
-              <span class="text-mutted">Discover your next career move, freelance gig, or
-                internship</span>
+              <span class="text-mutted">Zbuloni hapin tuaj te rradhës në karierrë apo internship</span>
             </div>
             <div class="col-lg-5 col-md-3 text-lg-end text-start">
               <ul class="breadcrumbs mt-sm-15">
-                <li><a href="home">Home</a></li>
-                <li>Employees list</li>
+                <li><a href="home">Kryefaqja</a></li>
+                <li>Lista e Kandidatëve</li>
               </ul>
             </div>
           </div>
@@ -68,7 +67,7 @@
 
                   </div>
                   <div class="box-button-find">
-                    <button class="btn btn-default float-right" (click)="search()">Find Now</button>
+                    <button class="btn btn-default float-right" (click)="search()">Kërko</button>
                   </div>
                 </div>
               </div>
@@ -127,11 +126,10 @@
                     </div>
                     <div class="card-2-bottom card-2-bottom-candidate mt-30 ">
                       <div class="text-center">
-                        <a class="btn-tags-sm mb-10" *ngFor="let skill of employee.skills"> {{skill}}</a>
+                        <a class=" btnn btn-tags-sm mb-10" *ngFor="let skill of employee.skills"> {{skill}}</a>
                       </div>
                       <div class="text-center mt-25 mb-5">
-                        <a [routerLink]="['employee-details', employee.id]" class="btn btn-border btn-brand-hover">View
-                          profile</a>
+                        <a [routerLink]="['employee-details', employee.id]" class="btn btn-border btn-brand-hover">Shiko Profilin</a>
                       </div>
                     </div>
                   </div>
@@ -196,12 +194,12 @@
     <section class="section-box mt-50 mb-60">
       <div class="container">
         <div class="box-newsletter">
-          <h5 class="text-md-newsletter">Sign up to get</h5>
-          <h6 class="text-lg-newsletter">the latest jobs</h6>
+          <h5 class="text-md-newsletter">Rregjistrohu këtu për</h5>
+          <h6 class="text-lg-newsletter">vendet e lira më të reja!</h6>
           <div class="box-form-newsletter mt-30">
             <form class="form-newsletter">
-              <input type="text" class="input-newsletter"  [(ngModel)]="subscribeEmail" id="subscribeEmail" name="subscribeEmail" placeholder="contact.alithemes@gmail.com" />
-              <button class="btn btn-default font-heading icon-send-letter" (click)="sub()" >Subscribe</button>
+              <input type="text" class="input-newsletter"  [(ngModel)]="subscribeEmail" id="subscribeEmail" name="subscribeEmail" placeholder="contact.youthalbania@gmail.com" />
+              <button class="btn btn-default font-heading icon-send-letter" (click)="sub()" >Abonohu</button>
             </form>
           </div>
         </div>
