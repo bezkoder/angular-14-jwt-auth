@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
         this.tokenStorage.saveToken(data.accessToken);
         this.tokenStorage.saveUser(data);
         this.toastr.success(
-          `You have successfully logged in!`,
+          `Sapo u loguat me sukses!`,
           'Success'
         );
         this.isLoginFailed = false;

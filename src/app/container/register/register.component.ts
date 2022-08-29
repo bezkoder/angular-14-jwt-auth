@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
         (data: any) => {
         this.isSuccessful = true;
           this.router.navigateByUrl('login');
-          this.toastr.success('New user added successfully', 'Success')
+          this.toastr.success('Një përdorues i ri sapo u shtua me sukses', 'Success')
       },
         (err: { error: { message: string; }; }) => {
         this.toastr.error(err.error.message, 'ERROR')

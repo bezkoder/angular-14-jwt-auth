@@ -37,7 +37,7 @@ export class EmployeeComponent implements OnInit {
         this.employees = data.data;
       },
       (error) => {
-        this.toastr.error(`${error.message}`, 'Something went wrong');
+        this.toastr.error(`${error.message}`, 'Diçka shkoi keq!');
       }
     );
   }
@@ -48,13 +48,13 @@ export class EmployeeComponent implements OnInit {
     this.subService.createSubcriber(data).subscribe(
       (response: any) => {
         this.toastr.success(
-          `You have successfully subscribed!`,
+          `Urime, sapo u abonuat me sukses!`,
           'Success'
         );
         this.subscribeEmail = ''
       },
       (error: any) => {
-        this.toastr.error(`${error.error.error}`, 'Something went wrong');
+        this.toastr.error(`${error.error.error}`, 'Diçka shkoi keq!');
       }
     );
   }

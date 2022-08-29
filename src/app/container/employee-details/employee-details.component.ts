@@ -59,7 +59,7 @@ export class EmployeeDetailsComponent implements OnInit {
 
         },
         error => {
-          this.toastr.error(error.error.message,"Something went wrong")
+          this.toastr.error(error.error.message,"Diçka shkoi keq!")
         });
   }
 
