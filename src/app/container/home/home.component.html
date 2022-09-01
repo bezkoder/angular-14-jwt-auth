@@ -29,10 +29,10 @@
 <!--                      </nav>-->
                   </div>
               </div>
-            <p style="margin-left:390px; margin-top: 15px"> Mirë se erdhe  <strong>{{username}}</strong></p>
+            <p *ngIf="isLoggedIn()" style="margin-left:390px; margin-top: 15px"> Mirë se erdhe  <strong>{{username}}</strong></p>
             <div class="header-right">
               <div class="block-signin">
-                <a (click)="logout()" class="btn btn-default btn-shadow ml-40 hover-up">Dil</a>
+                <a *ngIf="isLoggedIn()" (click)="logout()" class="btn btn-default btn-shadow ml-40 hover-up">Dil</a>
               </div>
             </div>
             <div *ngIf="!isLoggedIn()">
