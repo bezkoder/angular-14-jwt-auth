@@ -18,19 +18,23 @@
                   </div>
                   <div class="header-nav">
 <!--                      <nav class="nav-main-menu d-none d-xl-block">-->
-                          <ul class="main-menu">
+                          <ul class="main-menu" style="display: flex">
                               <li class="">
                                   <a class="active" href="home">Kryefaqja</a>
                               </li>
                               <li class="">
-                                  <a href="employee">Kantidatët</a>
+                                  <a href="employee">Kandidatët</a>
                               </li>
                           </ul>
 <!--                      </nav>-->
                   </div>
               </div>
             <p style="margin-left:390px; margin-top: 15px"> Mirë se erdhe  <strong>{{username}}</strong></p>
-
+            <div class="header-right">
+              <div class="block-signin">
+                <a (click)="logout()" class="btn btn-default btn-shadow ml-40 hover-up">Dil</a>
+              </div>
+            </div>
             <div *ngIf="!isLoggedIn()">
             <a href="/login"><button class="btn btn-default btn-find">Hyr </button></a>
           </div>
