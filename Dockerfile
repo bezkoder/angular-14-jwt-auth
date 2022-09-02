@@ -6,4 +6,4 @@ COPY . .
 RUN npm run build
 
 FROM nginx
-COPY --from=builder /app/dist/angluar-14-jwt-auth /usr/share/nginx/html
+COPY --from=builder /app/dist/hrm /usr/share/nginx/html
