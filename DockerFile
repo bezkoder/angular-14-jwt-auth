@@ -1,9 +1,10 @@
 FROM node:16-slim
-WORKDIR /usr/src/app
+WORKDIR  /usr/app
+COPY ./ /usr/app/
 COPY package*.json ./
 RUN npm install -g @angular/cli
 RUN npm install
 COPY . ./
 RUN npm run build
-EXPOSE 8080
-CMD [ "node", "server.js" ]
+EXPOSE 4200
+CMD [ "node", "index.js" ]
