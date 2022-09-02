@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-app.use(express.static('dist/angular-14-jwt-auth'));
+app.use(express.static('dist/hrm'));
 app.get('/', function (req, res,next) {
     res.redirect('/');
 });
