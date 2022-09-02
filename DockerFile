@@ -1,14 +1,17 @@
+FROM node:16.14.0 as build
 
-FROM node:16-alpine3.16 as build
-WORKDIR /app
-COPY ./package*.json ./
+WORKDIR /source
 
+# Copy the package lock file into the container
+COPY package*.json ./
+# Run ci only for the production dependencies
 RUN npm ci
 
-COPY ./ ./
-RUN npm run build
+# Copy the rest of the files into the container and build
+COPY . .
+RUN npm run build –prod
 
-FROM nginx:1.23.0-alpine
+FROM nginx:alpine
+COPY –from=build /source/dist/angluar-14-jwt-auth
+COPY –from=build /source/nginx.conf /etc/nginx/conf.d/
 EXPOSE 8080
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY --from=build /app/dist/angular-14-jwt-auth /usr/share/nginx/html
