@@ -14,11 +14,11 @@ steps:
       - run
       - deploy
       - $_SERVICE_NAME
-      - '-image'
+      - '--image'
       - '$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA'
-      - '-region'
+      - '--region'
       - $_DEPLOY_REGION
-      - '-platform'
+      - '--platform'
       - $_PLATFORM
     entrypoint: gcloud
 timeout: 1200s
