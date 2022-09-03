@@ -68,6 +68,19 @@ export class EmployeeDetailsComponent implements OnInit {
     this.router.navigateByUrl('login');
   }
 
+  contact(id : any) {
+    console.log(id)
+    this.employeeService.contact(id)
+      .subscribe(
+        (data: {data: Employee}) => {
+         
+          this.toastr.success('Sukses',"Kandidati u njoftua!")
+        },
+        error => {
+          this.toastr.error(error.error.message,"Diçka shkoi keq!")
+        });
+  }
+
   openCv() {
 
   }

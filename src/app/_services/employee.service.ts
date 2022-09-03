@@ -35,6 +35,10 @@ export class EmployeeService {
     return this.http.delete(API_URL + '/' + id, {body: data});
   }
 
+  contact(id:any): Observable<any> {
+    return this.http.post(API_URL + '/contact/' + id,'');
+  }
+
   createEmployee(data: any): Observable<any> {
     return this.http.post(API_URL, data);
   }
