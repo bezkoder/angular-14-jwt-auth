@@ -16,8 +16,7 @@
           <div class="main-header">
               <div class="header-left">
                   <div class="header-logo">
-                      <a  class="d-flex"><img  style=" width: 500%;
-                        height: auto;" alt="jobhub" src="../../../assets/imgs/theme/logo.png" /></a>
+                      <a  class="d-flex"><img  alt="jobhub" src="../../../assets/imgs/theme/logo5.png" /></a>
                   </div>
                   <div class="header-nav">
 <!--                      <nav class="nav-main-menu d-none d-xl-block">-->
@@ -32,16 +31,16 @@
 <!--                      </nav>-->
                   </div>
               </div>
-            <p *ngIf="isLoggedIn()" style="margin-left: 340px;"> Mirë se erdhe  <strong>{{username}}</strong></p>
-            <div class="header-right">
-              <div class="block-signin">
-                <a *ngIf="isLoggedIn()" (click)="logout()" class="btn btn-default btn-shadow ml-40 hover-up">Dil</a>
+              <p *ngIf="isLoggedIn()" style="margin-left: 340px;"> Mirë se erdhe  <strong>{{username}}</strong></p>
+              <div class="header-right">
+                <div class="block-signin">
+                  <a *ngIf="isLoggedIn()" (click)="logout()" class="btn btn-default btn-shadow ml-40 hover-up">Dil</a>
+                </div>
               </div>
+              <div *ngIf="!isLoggedIn()">
+              <a href="/login"><button class="btn btn-default btn-find">Hyr </button></a>
             </div>
-            <div *ngIf="!isLoggedIn()">
-            <a href="/login"><button class="btn btn-default btn-find">Hyr </button></a>
-          </div>
-          </div>
+            </div>
       </div>
   </header>
 
@@ -181,8 +180,8 @@
                   </div>
                   <div class="col-md-6 text-md-end text-start">
                       <div class="footer-social">
-                          <a href="#" class="icon-socials icon-facebook"></a>
-                          <a href="#" class="icon-socials icon-instagram"></a>
+                          <a   class="icon-socials icon-facebook" href="https://www.facebook.com/AME-All-Minds-Empowered-106298005154781/?hc_ref=ARQCQfHGx6D0GYR_6KlSKVN9h3zl6yBZtYvuD3JsHDMVrmEKoYmFplziuO2lytHtqhM&ref=nf_target"></a>
+                          <a href="https://www.instagram.com/amegroup.al/" class="icon-socials icon-instagram"></a>
                       </div>
                   </div>
               </div>
