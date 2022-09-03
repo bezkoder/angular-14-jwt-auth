@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const API_URL = 'http://34.118.90.212/api/employee';
+const API_URL = 'https://api-youthnetalbania.com/api/employee';
 
 @Injectable({
   providedIn: 'root'
@@ -42,17 +42,17 @@ export class EmployeeService {
    uploadImage(image: File): Observable<any> {
     const formData = new FormData();
     formData.append('file', image);
-    return this.http.post( 'http://34.118.90.212/api/file/upload', formData);
+    return this.http.post( 'https://api-youthnetalbania.com/api/file/upload', formData);
   }
 
   uploadVideo(video: File): Observable<any> {
     const formData = new FormData();
     formData.append('file', video);
-    return this.http.post( 'http://34.118.90.212/api/file/upload', formData);
+    return this.http.post( 'https://api-youthnetalbania.com/api/file/upload', formData);
   }
   uploadCv(cv: File): Observable<any> {
     const formData = new FormData();
     formData.append('file', cv);
-    return this.http.post( 'http://34.118.90.212/api/file/upload', formData);
+    return this.http.post( 'https://api-youthnetalbania.com/api/file/upload', formData);
   }
 }
