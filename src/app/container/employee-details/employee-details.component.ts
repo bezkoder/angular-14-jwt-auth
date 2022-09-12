@@ -35,7 +35,7 @@ export class EmployeeDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
+    window.scrollTo(0, 0);
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
     this.getEmployee(this.id)
     this.url =  this.employees?.videoPath
