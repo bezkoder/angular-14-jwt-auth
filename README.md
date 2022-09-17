@@ -25,6 +25,10 @@ You can take a look at following flow to have an overview of Requests and Respon
 For more detail, please visit the tutorial:
 > [Angular 14 JWT Authentication & Authorization with Web API example](https://www.bezkoder.com/angular-14-jwt-auth/)
 
+> [Angular 14 Logout when Token is expired](https://www.bezkoder.com/logout-when-token-expired-angular-14/)
+
+> [Angular 14 Refresh Token with Interceptor and JWT example](https://www.bezkoder.com/angular-14-refresh-token/)
+
 ## With Spring Boot back-end
 
 > [Angular + Spring Boot: JWT Authentication and Authorization example](https://www.bezkoder.com/angular-14-spring-boot-jwt-auth/)
