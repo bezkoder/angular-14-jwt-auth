@@ -9,8 +9,8 @@
           </div>
       </div>
   </div>
- 
-  
+
+
   <header class="header sticky-bar">
       <div class="container">
           <div class="main-header">
@@ -29,18 +29,20 @@
                               </li>
                           </ul>
 <!--                      </nav>-->
-                  </div>
               </div>
-              <p *ngIf="isLoggedIn()" style="margin-left: 340px;"> Mirë se erdhe  <strong>{{username}}</strong></p>
-              <div class="header-right">
-                <div class="block-signin">
-                  <a *ngIf="isLoggedIn()" (click)="logout()" class="btn btn-default btn-shadow ml-40 hover-up">Dil</a>
-                </div>
-              </div>
-              <div *ngIf="!isLoggedIn()">
+            </div>
+
+            <div class="header-right">
+              <div class="block-signin">
+                <a *ngIf="isLoggedIn()" (click)="logout()" class="btn btn-default btn-shadow ml-40 hover-up">Dil</a>
+            </div>
+          </div>
+            <div *ngIf="!isLoggedIn()">
               <a href="/login"><button class="btn btn-default btn-find">Hyr </button></a>
             </div>
-            </div>
+          </div>
+        <p *ngIf="isLoggedIn()" style="margin-left:50px !important; margin: -1rem"> Mirë se erdhe  <strong>{{username}}</strong></p>
+
       </div>
   </header>
 
