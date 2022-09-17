@@ -4,17 +4,19 @@
       <div class="preloader d-flex align-items-center justify-content-center">
           <div class="preloader-inner position-relative">
               <div class="text-center">
-                  <img src="../../../assets/imgs/theme/loading.gif" alt="jobhub" />
+                  <img src="../../../assets/imgs/theme/loading.gif" width="auto" alt="jobhub" />
               </div>
           </div>
       </div>
   </div>
+ 
+  
   <header class="header sticky-bar">
       <div class="container">
           <div class="main-header">
               <div class="header-left">
                   <div class="header-logo">
-                      <a  class="d-flex"><img alt="jobhub" src="../../../assets/imgs/theme/logo.png" /></a>
+                      <a  class="d-flex"><img  alt="jobhub" src="../../../assets/imgs/theme/logo5.png" /></a>
                   </div>
                   <div class="header-nav">
 <!--                      <nav class="nav-main-menu d-none d-xl-block">-->
@@ -29,16 +31,16 @@
 <!--                      </nav>-->
                   </div>
               </div>
-            <p *ngIf="isLoggedIn()" style="margin-left:390px; margin-top: 15px"> Mirë se erdhe  <strong>{{username}}</strong></p>
-            <div class="header-right">
-              <div class="block-signin">
-                <a *ngIf="isLoggedIn()" (click)="logout()" class="btn btn-default btn-shadow ml-40 hover-up">Dil</a>
+              <p *ngIf="isLoggedIn()" style="margin-left: 340px;"> Mirë se erdhe  <strong>{{username}}</strong></p>
+              <div class="header-right">
+                <div class="block-signin">
+                  <a *ngIf="isLoggedIn()" (click)="logout()" class="btn btn-default btn-shadow ml-40 hover-up">Dil</a>
+                </div>
               </div>
+              <div *ngIf="!isLoggedIn()">
+              <a href="/login"><button class="btn btn-default btn-find">Hyr </button></a>
             </div>
-            <div *ngIf="!isLoggedIn()">
-            <a href="/login"><button class="btn btn-default btn-find">Hyr </button></a>
-          </div>
-          </div>
+            </div>
       </div>
   </header>
 
@@ -50,7 +52,7 @@
                       <div class="col-lg-8">
                           <div class="block-banner">
                               <span class="text-small-primary text-small-primary--disk text-uppercase  wow animate__animated animate__fadeInUp">Gjeni punonjësin tuaj</span>
-                              <h1 class="heading-banner wow animate__animated animate__fadeInUp">Mënyra më e lehtë për të gjetur punonjësin tuaj të ri</h1>
+                              <h1 class="heading-banner wow animate__animated animate__fadeInUp"><b>Mënyra më e lehtë për të gjetur punonjësin tuaj të ri</b></h1>
                               <div class="banner-description mt-30 wow animate__animated animate__fadeInUp">Çdo muaj, më shumë punëkërkues të rinj i drejtohen platformës tonë në kërkimin e tyre për punë. Shiko video-prezantimin e secilit kandidat për të krijuar nje ide më të qartë,të shpejtë dhe pa formalitete.</div>
                               <br>
                               <a href="employee"><button class="btn btn-default btn-find">Kërko</button></a>
@@ -156,14 +158,11 @@
                   </div>
                   <div class="col-lg-3 col-md-6 col-sm-12 col-12">
                       <div class="card-grid hover-up wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
-                          <div class="text-center mt-15">
-                              <h3>99+</h3>
-                          </div>
                           <div class="text-center mt-30">
-                              <p class="text-center mt-30 text-stroke-40">Kantidatë janë duke pritur per ty</p>
+                              <p class="text-center mt-30 text-stroke-40">Kantidatët janë duke pritur per ty</p>
                             </div>
                         </div>
-                        <div class="box-button-shadow"><a href="employee" class="btn btn-default">Zbulo më shumë</a></div>
+                        <div class="box-button"><a href="employee" class="btn btn-default">Zbulo më shumë</a></div>
                   </div>
               </div>
           </div>
@@ -181,10 +180,8 @@
                   </div>
                   <div class="col-md-6 text-md-end text-start">
                       <div class="footer-social">
-                          <a href="#" class="icon-socials icon-facebook"></a>
-                          <a href="#" class="icon-socials icon-twitter"></a>
-                          <a href="#" class="icon-socials icon-instagram"></a>
-                          <a href="#" class="icon-socials icon-linkedin"></a>
+                          <a   class="icon-socials icon-facebook" href="https://www.facebook.com/AME-All-Minds-Empowered-106298005154781/?hc_ref=ARQCQfHGx6D0GYR_6KlSKVN9h3zl6yBZtYvuD3JsHDMVrmEKoYmFplziuO2lytHtqhM&ref=nf_target"></a>
+                          <a href="https://www.instagram.com/amegroup.al/" class="icon-socials icon-instagram"></a>
                       </div>
                   </div>
               </div>

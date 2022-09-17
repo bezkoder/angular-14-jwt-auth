@@ -4,22 +4,23 @@
       <div class="main-header">
         <div class="header-left">
           <div class="header-logo">
-            <a href="index.html" class="d-flex"><img alt="jobhub" src="assets/imgs/theme/jobhub-logo.svg" /></a>
+            <a href="index.html" class="d-flex"><img alt="jobhub" src="assets/imgs/theme/logo5.png" /></a>
           </div>
           <div class="header-nav">
-<!--            <nav class="nav-main-menu d-none d-xl-block">-->
-              <ul class="main-menu" style="display: flex">
-                <li class="">
-                  <a class="active" href="home">Kryefaqja</a>
-                </li>
-                <li class="">
-                  <a href="employee">Kandidatët</a>
-                </li>
-              </ul>
-<!--            </nav>-->
+
+            <!--            <nav class="nav-main-menu d-none d-xl-block">-->
+            <ul class="main-menu" style="display: flex">
+              <li class="">
+                <a class="active" href="home">Kryefaqja</a>
+              </li>
+              <li class="">
+                <a href="employee">Kandidatët</a>
+              </li>
+            </ul>
+            <!--            </nav>-->
           </div>
         </div>
-        <p style="margin-left:390px; margin-top: 15px"> Mirë se erdhe <strong>{{username}}</strong></p>
+        <p style="margin-left:340px; margin-top: 15px"> Mirë se erdhe <strong>{{username}}</strong></p>
 
         <div class="header-right">
           <div class="block-signin">
@@ -52,17 +53,6 @@
               <span class="text-small" style="margin-right: 10px"><i
                   class="fi fi-rr-id-badge text-mutted"></i>{{employees.age}} vjeç</span>
               <span class="text-small"><i class="fi fi-rr-phone-call text-mutted"></i>{{employees.phone}}</span>
-              <span class="text-small" style="margin-left: 10px"><i
-                  class="fi fi-rr-check text-mutted"></i>{{employees.active}}</span>
-
-              <div class="rate-reviews-small">
-                <span><img src="assets/imgs/theme/icons/star.svg" alt="jobhub" /></span>
-                <span><img src="assets/imgs/theme/icons/star.svg" alt="jobhub" /></span>
-                <span><img src="assets/imgs/theme/icons/star.svg" alt="jobhub" /></span>
-                <span><img src="assets/imgs/theme/icons/star.svg" alt="jobhub" /></span>
-                <span><img src="assets/imgs/theme/icons/star.svg" alt="jobhub" /></span>
-                <span class="ml-10 text-muted text-small">(5.0)</span>
-              </div>
             </div>
             <div class="row align-items-end">
               <div class="btnn col-lg-6">
@@ -98,6 +88,18 @@
 
               </p>
               <div class="divider"></div>
+              <h4 class="mt-30 mb-30">Edukimi</h4>
+              <div class="row">
+                
+                   <p> {{employees.education}}</p>
+                 
+              
+                <div class="col-lg-6">
+                  <p class="text-muted lh-32">
+                  </p>
+                </div>
+              </div>
+              <div class="divider"></div>
               <h4 class="mb-20 mt-25">Eksperienca e punës</h4>
               <div class="row" *ngFor="let el of experiences">
 
@@ -117,29 +119,13 @@
               </div>
               <div class="divider"></div>
               <h4 class="mt-30 mb-30">Video Prezantimi</h4>
-              <video [src]="url" height="300" width="650px" controls></video>
-
-<!--              <video src={{employees.videoPath}} style="width: 650px; border-radius: 0" alt="video"-->
-<!--                onloadedmetadata="this.muted = false"></video>-->
-
-              <div class="divider"></div>
-              <h4 class="mt-30 mb-30">Edukimi</h4>
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul>
-                    {{employees.education}}
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <p class="text-muted lh-32">
-                  </p>
-                </div>
-              </div>
+              <video [src]="url" height="auto" width="100%" controls></video>
               <div class="divider"></div>
               <h4 class="mb-10 mt-30">Aftësitë</h4>
               <div class="block-progress-status">
                 <div class="item-progress">
-                  <div class="title-progress"><strong class="text-md-bold">Komunikimi</strong> {{communication}}/100</div>
+                  <div class="title-progress"><strong class="text-md-bold">Komunikimi</strong> {{communication}}/100
+                  </div>
                   <div class="info-progress">
                     <div class="progress">
                       <div [style.width.%]=communication class="progress-bar"></div>
@@ -147,15 +133,17 @@
                   </div>
                 </div>
                 <div class="item-progress">
-                  <div class="title-progress"><strong class="text-md-bold">Mendimi Kritik</strong> {{criticalThinking}}/100</div>
+                  <div class="title-progress"><strong class="text-md-bold">Mendimi Kritik</strong>
+                    {{criticalThinking}}/100</div>
                   <div class="info-progress">
                     <div class="progress">
-                      <div  [style.width.%]=criticalThinking class="progress-bar"></div>
+                      <div [style.width.%]=criticalThinking class="progress-bar"></div>
                     </div>
                   </div>
                 </div>
                 <div class="item-progress">
-                  <div class="title-progress"><strong class="text-md-bold">Qëndrimi pozitiv</strong>  {{positiveAttitude}}/100</div>
+                  <div class="title-progress"><strong class="text-md-bold">Qëndrimi pozitiv</strong>
+                    {{positiveAttitude}}/100</div>
                   <div class="info-progress">
                     <div class="progress">
                       <div [style.width.%]=positiveAttitude class="progress-bar"></div>
@@ -163,7 +151,8 @@
                   </div>
                 </div>
                 <div class="item-progress">
-                  <div class="title-progress"><strong class="text-md-bold">Lidership  <br>   </strong>  {{leadership}}/100</div>
+                  <div class="title-progress"><strong class="text-md-bold">Lidership <br> </strong> {{leadership}}/100
+                  </div>
                   <div class="info-progress">
                     <div class="progress">
                       <div [style.width.%]=leadership class="progress-bar"></div>
@@ -171,7 +160,8 @@
                   </div>
                 </div>
                 <div class="item-progress">
-                  <div class="title-progress"><strong class="text-md-bold">Puna në grup  <br>   </strong> {{teamwork}}/100</div>
+                  <div class="title-progress"><strong class="text-md-bold">Puna në grup <br> </strong> {{teamwork}}/100
+                  </div>
                   <div class="info-progress">
                     <div class="progress">
                       <div [style.width.%]=teamwork class="progress-bar"></div>
@@ -216,12 +206,13 @@
                   </li>
                 </ul>
               </div>
+              <a class="btn btn-default"  (click)="contact(employees?.id)">Kontakto</a>
             </div>
 
             <div class="sidebar-shadow">
-              <h5 class="sidebar-title">Përmbledhje</h5>
+              <h5 class="font-bold">Karakterisitka</h5>
               <div class="block-tags">
-                <a  class="btn btn-tags-sm mb-10 mr-5"  *ngFor="let item of overview">{{item}}</a>
+                <a class="btn btn-tags-sm mb-10" *ngFor="let item of overview">{{item}}</a>
               </div>
             </div>
           </div>
@@ -237,15 +228,13 @@
       <div class="footer-bottom mt-50">
         <div class="row">
           <div class="col-md-6">
-            Copyright ©2022 <a ><strong>AME</strong></a>. Të gjitha të drejtat e rezervuara
+            Copyright ©2022 <a><strong>AME</strong></a>. Të gjitha të drejtat e rezervuara
           </div>
           <div class="col-md-6 text-md-end text-start">
             <div class="footer-social">
-              <a href="#" class="icon-socials icon-facebook"></a>
-              <a href="#" class="icon-socials icon-twitter"></a>
-              <a href="#" class="icon-socials icon-instagram"></a>
-              <a href="#" class="icon-socials icon-linkedin"></a>
-            </div>
+              <a class="icon-socials icon-facebook" href="https://www.facebook.com/AME-All-Minds-Empowered-106298005154781/?hc_ref=ARQCQfHGx6D0GYR_6KlSKVN9h3zl6yBZtYvuD3JsHDMVrmEKoYmFplziuO2lytHtqhM&ref=nf_target"></a>
+              <a href="https://www.instagram.com/amegroup.al/" class="icon-socials icon-instagram"></a>
+          </div>
           </div>
         </div>
       </div>

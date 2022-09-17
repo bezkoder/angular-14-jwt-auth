@@ -1,0 +1,14 @@
+runtime: nodejs16
+
+instance_class: F2
+
+env_variables: 
+  BUCKET_NAME: "hrm-v1"
+
+handlers:
+- url: /
+  static_files: dist/hrm/index.html
+  upload: dist/hrm/index.html
+
+- url: /
+  static_dir: dist/hrm

@@ -35,7 +35,7 @@ export class EmployeeDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
+    window.scrollTo(0, 0);
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
     this.getEmployee(this.id)
     this.url =  this.employees?.videoPath
@@ -66,6 +66,19 @@ export class EmployeeDetailsComponent implements OnInit {
   logout(): void {
     this.tokenStorageService.signOut();
     this.router.navigateByUrl('login');
+  }
+
+  contact(id : any) {
+    console.log(id)
+    this.employeeService.contact(id)
+      .subscribe(
+        (data: {data: Employee}) => {
+         
+          this.toastr.success('Sukses',"Kandidati u njoftua!")
+        },
+        error => {
+          this.toastr.error(error.error.message,"Diçka shkoi keq!")
+        });
   }
 
   openCv() {
