@@ -7,11 +7,13 @@
           <div class="header-logo">
             <a  class="d-flex">
               <img alt="Youth Net Albania" src="../../../assets/imgs/theme/logo.png" />
+
             </a>
+
           </div>
           <div class="header-nav">
 <!--            <nav class="nav-main-menu d-none d-xl-block">-->
-              <ul class="main-menu" style="display: flex">
+              <ul class="main-menu" style="display: contents">
                 <li class="">
                   <a class="active" href="home">Kryefaqja</a>
                 </li>
@@ -21,16 +23,21 @@
               </ul>
 <!--            </nav>-->
           </div>
+
+          <p style="margin-left: 90px; margin: 0rem"> Mirë se erdhe <strong>{{username}}</strong></p>
+
+
         </div>
-        <p style="margin-left:390px; margin-top: 15px"> Mirë se erdhe <strong>{{username}}</strong></p>
 
         <div class="header-right">
           <div class="block-signin">
             <a (click)="logout()" class="btn btn-default btn-shadow ml-40 hover-up">Dil</a>
           </div>
         </div>
+
       </div>
     </div>
+
   </header>
   <!--End header-->
   <!-- Content -->
