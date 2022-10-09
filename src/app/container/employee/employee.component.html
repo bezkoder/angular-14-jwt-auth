@@ -130,9 +130,9 @@
                           class="fi-rr-briefcase">&nbsp;</i>{{employee.actualPosition}}</span>
                     </div>
                     <div class="card-2-bottom card-2-bottom-candidate mt-30 ">
-                      <div class="text-center">
+                      <li class="text-center">
                         <a class=" btnn btn-tags-sm mb-10" *ngFor="let skill of employee.skills"> {{skill}}</a>
-                      </div>
+                      </li>
                       <div class="text-center mt-25 mb-5">
                         <a [routerLink]="['employee-details', employee.id]" class="btn btn-border btn-brand-hover">Shiko Profilin</a>
                       </div>
