@@ -6378,7 +6378,7 @@ label {
   background-color: #FFF9F3;
   display: inline-block;
   width: 100%;
-  padding: 55px 0px;
+  padding: 95px 2px;
   position: relative;
 }
 @media (max-width: 700px) {
@@ -7999,7 +7999,7 @@ label {
     max-width: 100% !important;
   }
   .banner-hero.banner-homepage-3 .block-banner {
-    padding: 30px 15px;
+    padding: 58px 15px;
   }
   .box-image-findjob img {
     border-radius: 20px;
