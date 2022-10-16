@@ -69,7 +69,7 @@ export class EmployeeDetailsComponent implements OnInit {
   }
 
   contact(id : any) {
-    console.log(id)
+    //console.log(id)
     this.employeeService.contact(id)
       .subscribe(
         (data: {data: Employee}) => {
