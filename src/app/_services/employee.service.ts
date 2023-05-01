@@ -46,17 +46,17 @@ export class EmployeeService {
    uploadImage(image: File): Observable<any> {
     const formData = new FormData();
     formData.append('file', image);
-    return this.http.post( 'https://api-youthnetalbania.com/api/file/upload', formData);
+    return this.http.post( 'https://youthnetalbania.onrender.com/api/file/upload', formData);
   }
 
   uploadVideo(video: File): Observable<any> {
     const formData = new FormData();
     formData.append('file', video);
-    return this.http.post( 'https://api-youthnetalbania.com/api/file/upload', formData);
+    return this.http.post( 'https://youthnetalbania.onrender.com/file/upload', formData);
   }
   uploadCv(cv: File): Observable<any> {
     const formData = new FormData();
     formData.append('file', cv);
-    return this.http.post( 'https://api-youthnetalbania.com/api/file/upload', formData);
+    return this.http.post( 'https://youthnetalbania.onrender.com/file/upload', formData);
   }
 }
