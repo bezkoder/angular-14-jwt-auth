@@ -12,6 +12,7 @@ import {LoginComponent} from "./login/login.component";
 import {PrivacyComponent} from "./privacy/privacy.component";
 import { TermsComponent } from './terms/terms.component';
 import { HelpComponent } from './help/help.component';
+import { ForgotpComponent } from './forgotp/forgotp.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { HelpComponent } from './help/help.component';
     EmployeeDetailsComponent,
     RegisterComponent,
     LoginComponent,
+    ForgotpComponent,
   ],
   exports: [
   ],
