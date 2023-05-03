@@ -13,6 +13,10 @@ import {PrivacyComponent} from "./privacy/privacy.component";
 import { TermsComponent } from './terms/terms.component';
 import { HelpComponent } from './help/help.component';
 import { ForgotpComponent } from './forgotp/forgotp.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatButtonModule} from "@angular/material/button";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 
 
 @NgModule({
@@ -28,27 +32,32 @@ import { ForgotpComponent } from './forgotp/forgotp.component';
   ],
 
   imports: [
-        BrowserModule,
-        RouterModule,
-        CommonModule,
-        FormsModule,
-        ReactiveFormsModule,
-        ReactiveFormsModule,
-        NoopAnimationsModule,
-        BrowserAnimationsModule,
+    BrowserModule,
+    RouterModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ReactiveFormsModule,
+    NoopAnimationsModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
 
-        RouterModule.forRoot([
-          { path: '', pathMatch: "full", redirectTo: 'home' },
-          {path: 'home', component: HomeComponent},
-          {path: 'login', component: LoginComponent},
-          {path: 'forget-password', component: ForgotpComponent},
-          {path: 'register', component: RegisterComponent},
-          {path: 'privacy', component: PrivacyComponent},
-          {path: 'terms', component: TermsComponent},
-          {path: 'help', component: HelpComponent},
-          {path: 'employee', component: EmployeeComponent},
-          {path: 'employee/employee-details/:id', component: EmployeeDetailsComponent},
-        ]),
-    ]
+
+    RouterModule.forRoot([
+      {path: '', pathMatch: "full", redirectTo: 'home'},
+      {path: 'home', component: HomeComponent},
+      {path: 'login', component: LoginComponent},
+      {path: 'forget-password', component: ForgotpComponent},
+      {path: 'register', component: RegisterComponent},
+      {path: 'privacy', component: PrivacyComponent},
+      {path: 'terms', component: TermsComponent},
+      {path: 'help', component: HelpComponent},
+      {path: 'employee', component: EmployeeComponent},
+      {path: 'employee/employee-details/:id', component: EmployeeDetailsComponent},
+    ]),
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+  ]
 })
 export class ContainerModule { }

@@ -3,6 +3,8 @@ import {AuthService} from "../../_services/auth.service";
 import {TokenStorageService} from "../../_services/token-storage.service";
 import {Router} from "@angular/router";
 import { ToastrService } from 'ngx-toastr';
+import {ForgotpComponent} from "../forgotp/forgotp.component";
+import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-login',
@@ -16,11 +18,14 @@ export class LoginComponent implements OnInit {
   isLoginFailed = false;
   errorMessage = '';
   roles: string[] = [];
+  loading= false;
 
   constructor(private authService: AuthService,
               private toastr: ToastrService,
               private tokenStorage: TokenStorageService,
-              private router: Router) { }
+              private router: Router,
+              public dialog: MatDialog,
+  ) { }
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
@@ -58,4 +63,18 @@ export class LoginComponent implements OnInit {
   reloadPage(): void {
     window.location.reload();
   }
+
+  openEmailDialog() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.width = '150px';
+    dialogConfig.height = '150px';
+    dialogConfig.panelClass = 'modal-dialog-container';
+
+    const dialogRef = this.dialog.open(ForgotpComponent, dialogConfig);
+
+    dialogRef.afterClosed().subscribe((result: any) => {
+      console.log(result);
+    });
+  }
 }
+
