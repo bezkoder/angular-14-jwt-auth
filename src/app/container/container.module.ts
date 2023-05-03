@@ -41,6 +41,7 @@ import { ForgotpComponent } from './forgotp/forgotp.component';
           { path: '', pathMatch: "full", redirectTo: 'home' },
           {path: 'home', component: HomeComponent},
           {path: 'login', component: LoginComponent},
+          {path: 'forget-password', component: ForgotpComponent},
           {path: 'register', component: RegisterComponent},
           {path: 'privacy', component: PrivacyComponent},
           {path: 'terms', component: TermsComponent},
