@@ -39,16 +39,19 @@ export class AuthService {
     // construct the request body
     const requestBody = {
       email: email,
-      token: token,
       newPassword: newPassword,
       confirmPassword: confirmPassword
     };
 
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      })
+    };
+
     const authHeader = new HttpHeaders().set('Authorization', `Bearer ${token}`);
-
-    const baseUrl = `${route.url.join('/')}`;
-
-    return this.http.post(`${baseUrl}/api/auth/reset-password`, requestBody, { headers: authHeader });
+    return this.http.post(`https://youthnetalbania.onrender.com/api/auth/forget-password`, requestBody, httpOptions);
   }
 
 }

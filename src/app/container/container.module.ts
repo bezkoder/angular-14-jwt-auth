@@ -57,6 +57,8 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
       {path: 'employee', component: EmployeeComponent},
       {path: 'reset-password', component: ResetPasswordComponent},
       {path: 'employee/employee-details/:id', component: EmployeeDetailsComponent},
+      { path: '**', redirectTo: 'home' } // wildcard route
+      
     ]),
     MatButtonModule,
     MatFormFieldModule,
