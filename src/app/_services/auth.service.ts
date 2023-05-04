@@ -30,6 +30,10 @@ export class AuthService {
     }, httpOptions);
   }
 
+  forgetP(email: string): Observable<any> {
+    return this.http.post('https://youthnetalbania.onrender.com/api/auth/forget-password', { email })
+  }
+
 
 
 }

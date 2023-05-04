@@ -49,7 +49,7 @@ export class EmployeeComponent implements OnInit {
       (response: any) => {
         this.toastr.success(
           `Urime, sapo u abonuat me sukses!`,
-          'Success'
+          'Sukses!'
         );
         this.subscribeEmail = ''
       },

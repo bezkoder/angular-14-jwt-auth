@@ -17,6 +17,7 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {MatButtonModule} from "@angular/material/button";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import {MatInputModule} from "@angular/material/input";
     RegisterComponent,
     LoginComponent,
     ForgotpComponent,
+    ResetPasswordComponent,
   ],
   exports: [
   ],
@@ -53,6 +55,7 @@ import {MatInputModule} from "@angular/material/input";
       {path: 'terms', component: TermsComponent},
       {path: 'help', component: HelpComponent},
       {path: 'employee', component: EmployeeComponent},
+      {path: 'reset-password', component: ResetPasswordComponent},
       {path: 'employee/employee-details/:id', component: EmployeeDetailsComponent},
     ]),
     MatButtonModule,
