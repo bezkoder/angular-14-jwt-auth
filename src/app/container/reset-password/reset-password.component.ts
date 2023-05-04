@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../../_services/auth.service";
 import {ToastrService} from "ngx-toastr";
 import {TokenStorageService} from "../../_services/token-storage.service";
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {ForgotpComponent} from "../forgotp/forgotp.component";
 
@@ -19,45 +19,37 @@ export class ResetPasswordComponent implements OnInit {
   errorMessage = '';
   roles: string[] = [];
   loading= false;
+  email: string | null;
+  token: string | null;
+  newPassword!: string;
+  confirmPassword!: string;
   constructor(private authService: AuthService,
               private toastr: ToastrService,
               private tokenStorage: TokenStorageService,
               private router: Router,
               public dialog: MatDialog,
-  ) { }
+              private route: ActivatedRoute,
+
+  ) {  this.email = this.route.snapshot.queryParamMap.get('email');
+    this.token = this.route.snapshot.queryParamMap.get('token');
+  }
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
       this.roles = this.tokenStorage.getUser().roles;
     }
   }
-
-  onSubmit(): void {
-    this.authService.login(this.form).subscribe(
-      data => {
-
-        this.router.navigateByUrl('/employee');
-        this.tokenStorage.saveToken(data.accessToken);
-        this.tokenStorage.saveUser(data);
-        this.toastr.success(
-          `Sapo u loguat me sukses!`,
-          'Sukses!'
-        );
-        this.isLoginFailed = false;
-        this.isLoggedIn = true;
-        this.roles = this.tokenStorage?.getUser().roles;
-
-      },
-      error => {
-        this.errorMessage = error.error.message;
-        this.toastr.error(`${error.error.message}`, 'Error');
-        this.isLoginFailed = true;
-        if(error.status == '401'){
-          this.router.navigateByUrl('/login');
-        }
-      }
-    );
+  onSubmit() {
+    // call the resetPassword() method of the PasswordResetService
+    this.authService.resetPassword(this.email, this.token, this.newPassword, this.confirmPassword, this.route.snapshot).subscribe(response => {
+      this.toastr.success(
+        `Fjalekalimi u ndryshua me sukses!`,
+        'Sukses!'
+      );    }, error => {
+      this.errorMessage = error.error.message;
+    });
   }
+
 
   reloadPage(): void {
     window.location.reload();
