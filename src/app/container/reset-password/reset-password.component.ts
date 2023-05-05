@@ -23,6 +23,7 @@ export class ResetPasswordComponent implements OnInit {
   token: string | null;
   newPassword!: string;
   confirmPassword!: string;
+  showPassword: boolean = false;
   constructor(private authService: AuthService,
               private toastr: ToastrService,
               private tokenStorage: TokenStorageService,
@@ -59,6 +60,12 @@ export class ResetPasswordComponent implements OnInit {
   reloadPage(): void {
     window.location.reload();
   }
+
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
+  
+
 
 
 
