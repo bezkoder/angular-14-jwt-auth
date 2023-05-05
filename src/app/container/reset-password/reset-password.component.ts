@@ -43,10 +43,12 @@ export class ResetPasswordComponent implements OnInit {
     // call the resetPassword() method of the PasswordResetService
     console.log(this.email,this.newPassword, this.confirmPassword)
     this.authService.resetPassword(this.email, this.token, this.newPassword, this.confirmPassword, this.route.snapshot).subscribe(response => {
+      this.router.navigate(['/login']);
       this.toastr.success(
         `Fjalekalimi u ndryshua me sukses!`,
         'Sukses!'
-      );    }, error => {
+      ); 
+       }, error => {
       this.errorMessage = error.error.message;
     });
   }
