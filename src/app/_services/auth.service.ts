@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {ActivatedRouteSnapshot} from "@angular/router";
 
@@ -42,16 +42,19 @@ export class AuthService {
       newPassword: newPassword,
       confirmPassword: confirmPassword
     };
-
+  
     const httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
+      }),
+      setHeaders: {
         'Authorization': `Bearer ${token}`
-      })
+      }
     };
 
-    const authHeader = new HttpHeaders().set('Authorization', `Bearer ${token}`);
-    return this.http.post(`https://youthnetalbania.onrender.com/api/auth/forget-password`, requestBody, httpOptions);
+    console.log(httpOptions)
+  
+    return this.http.post(`https://youthnetalbania.onrender.com/api/auth/reset-password`, requestBody, httpOptions);
   }
 
 }
