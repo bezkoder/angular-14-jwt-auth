@@ -38,6 +38,7 @@ export class AuthService {
   resetPassword(email: string | null, token: string | null, newPassword: string, confirmPassword: string, route: ActivatedRouteSnapshot): Observable<any> {
     // construct the request body
     const requestBody = {
+      token: token,
       email: email,
       newPassword: newPassword,
       confirmPassword: confirmPassword
@@ -52,9 +53,9 @@ export class AuthService {
       }
     };
 
-    console.log(httpOptions)
+    const authHeader = new HttpHeaders().set('Authorization', `Bearer ${token}`);
   
-    return this.http.post(`https://youthnetalbania.onrender.com/api/auth/reset-password`, requestBody, httpOptions);
+    return this.http.post(`https://youthnetalbania.onrender.com/api/auth/reset-password`, requestBody, { headers: authHeader });
   }
 
 }
