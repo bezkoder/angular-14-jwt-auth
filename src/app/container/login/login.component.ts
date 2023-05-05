@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {AuthService} from "../../_services/auth.service";
 import {TokenStorageService} from "../../_services/token-storage.service";
 import {Router} from "@angular/router";
@@ -12,6 +12,7 @@ import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  @ViewChild('loginPage') loginPage: ElementRef | undefined;
 
   form: any = {};
   isLoggedIn = false;
@@ -66,9 +67,7 @@ export class LoginComponent implements OnInit {
 
   openEmailDialog() {
     const dialogConfig = new MatDialogConfig();
-    dialogConfig.width = '150px';
-    dialogConfig.height = '150px';
-    dialogConfig.panelClass = 'modal-dialog-container';
+    dialogConfig.width = '550px';
 
     const dialogRef = this.dialog.open(ForgotpComponent, dialogConfig);
 

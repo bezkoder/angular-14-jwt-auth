@@ -3,13 +3,13 @@ import {AuthService} from "../../_services/auth.service";
 import {ToastrService} from "ngx-toastr";
 import {TokenStorageService} from "../../_services/token-storage.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
-import {ForgotpComponent} from "../forgotp/forgotp.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-reset-password',
   templateUrl: './reset-password.component.html',
-  styleUrls: ['./reset-password.component.css']
+  styleUrls: ['./reset-password.component.css'],
+
 })
 export class ResetPasswordComponent implements OnInit {
 
@@ -40,6 +40,8 @@ export class ResetPasswordComponent implements OnInit {
     }
   }
   onSubmit() {
+    const token = this.tokenStorage.getToken(); // get the Bearer token from the TokenStorageService
+
     // call the resetPassword() method of the PasswordResetService
     console.log(this.email,this.newPassword, this.confirmPassword)
     this.authService.resetPassword(this.email, this.token, this.newPassword, this.confirmPassword, this.route.snapshot).subscribe(response => {
