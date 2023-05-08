@@ -61,4 +61,9 @@ export class ResetPasswordComponent implements OnInit {
     window.location.reload();
   }
 
+  // passwordsMatch() {
+  //   if(this.confirmPassword)
+  //     this.newPassword === this.confirmPassword;
+  //
+  // }
 }
