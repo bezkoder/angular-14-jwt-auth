@@ -24,7 +24,8 @@ import {ContainerModule} from "./container/container.module";
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    FormsModule
+    FormsModule,
+
   ],
   providers: [authInterceptorProviders,[DatePipe], /* optional */
   ],  bootstrap: [AppComponent]

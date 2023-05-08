@@ -18,6 +18,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -57,12 +58,13 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
       {path: 'employee', component: EmployeeComponent},
       {path: 'reset-password', component: ResetPasswordComponent},
       {path: 'employee/employee-details/:id', component: EmployeeDetailsComponent},
-      { path: '**', redirectTo: 'home' } // wildcard route
-      
+      {path: '**', redirectTo: 'home'} // wildcard route
+
     ]),
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatIconModule,
   ]
 })
 export class ContainerModule { }

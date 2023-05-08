@@ -23,7 +23,7 @@ export class ResetPasswordComponent implements OnInit {
   token: string | null;
   newPassword!: string;
   confirmPassword!: string;
-  showPassword: boolean = false;
+  hide= true;
   constructor(private authService: AuthService,
               private toastr: ToastrService,
               private tokenStorage: TokenStorageService,
@@ -50,7 +50,7 @@ export class ResetPasswordComponent implements OnInit {
       this.toastr.success(
         `Fjalekalimi u ndryshua me sukses!`,
         'Sukses!'
-      ); 
+      );
        }, error => {
       this.errorMessage = error.error.message;
     });
@@ -60,13 +60,5 @@ export class ResetPasswordComponent implements OnInit {
   reloadPage(): void {
     window.location.reload();
   }
-
-  togglePasswordVisibility() {
-    this.showPassword = !this.showPassword;
-  }
-  
-
-
-
 
 }
