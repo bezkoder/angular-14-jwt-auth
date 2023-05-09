@@ -47,7 +47,7 @@
                        name="password"
                        id="password"
                        autocomplete="off">
-                <button mat-icon-button matSuffix (click)="hide = !hide" class="password-eye"
+                <button mat-icon-button matSuffix (click)="hide = !hide; $event.preventDefault()"  class="password-eye"
                         [attr.aria-label]="hide ? 'Hide password' : 'Show password'"
                         [attr.aria-pressed]="hide">
                   <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
