@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
   errorMessage = '';
   roles: string[] = [];
   loading= false;
+  hide = true;
 
   constructor(private authService: AuthService,
               private toastr: ToastrService,

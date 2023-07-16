@@ -1,18 +1,15 @@
 <div class="wrapper">
-
-
   <form [formGroup]="myForm">
-
     <h2 mat-dialog-title style="text-align: center; font-size: 20px">Vendosni emailin tuaj </h2>
     <div>
-      <div >
+      <div>
         <mat-form-field class="input-style ">
           <input matInput formControlName="email" id="email" name="email" required>
         </mat-form-field>
       </div>
     </div>
     <div mat-dialog-actions>
-      <button mat-button cdkFocusInitial class="confirm-btn" (click)="onSubmit()">Dergo</button>
+      <button mat-button cdkFocusInitial class="confirm-btn" (click)="onSubmit()">Dërgo</button>
     </div>
   </form>
 </div>
